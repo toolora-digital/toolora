@@ -1,0 +1,1128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Password Generator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Generate strong and secure random passwords with Toolora's free online password generator. Customize password length, numbers, symbols, and letters."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link active"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Privacy & Security
+          </span>
+
+          <h1>
+            Password
+            <span class="gradient-text">
+              Generator
+            </span>
+          </h1>
+
+          <p>
+            Create strong random passwords with customizable
+            length, letters, numbers, and symbols.
+            Fast, simple, and completely free.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Password Generator
+              </span>
+
+              <h2>
+                Generate a strong password
+              </h2>
+
+              <p>
+                Customize your password and generate a new one instantly.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 PASSWORD OUTPUT
+                 ================================================= -->
+
+            <div class="result-panel">
+
+              <div class="result-label">
+                Generated Password
+              </div>
+
+
+              <div
+                id="passwordOutput"
+                style="
+                  font-size: clamp(1.2rem, 3vw, 2rem);
+                  font-weight: 700;
+                  letter-spacing: 1px;
+                  word-break: break-all;
+                  margin-top: 10px;
+                "
+              >
+                Click Generate
+              </div>
+
+
+              <p
+                class="result-description"
+                id="passwordStatus"
+              >
+                Your generated password will appear here.
+              </p>
+
+
+              <div class="tool-actions">
+
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="generateBtn"
+                >
+                  Generate Password
+                </button>
+
+
+                <button
+                  class="btn btn-secondary"
+                  type="button"
+                  id="copyBtn"
+                >
+                  Copy Password
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 PASSWORD STRENGTH
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="margin-top: 28px;"
+            >
+
+              <div class="result-label">
+                Password Strength
+              </div>
+
+
+              <div
+                id="strengthText"
+                class="result-number"
+              >
+                —
+              </div>
+
+
+              <p
+                class="result-description"
+                id="strengthDescription"
+              >
+                Generate a password to check its strength.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 SETTINGS
+                 ================================================= -->
+
+            <div
+              class="tool-panel-header"
+              style="margin-top: 40px;"
+            >
+
+              <span class="card-category">
+                Customize
+              </span>
+
+              <h2>
+                Password settings
+              </h2>
+
+              <p>
+                Choose the characters you want to include.
+              </p>
+
+            </div>
+
+
+            <!-- LENGTH -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="length"
+              >
+                Password Length
+              </label>
+
+              <input
+                class="input"
+                type="number"
+                id="length"
+                min="4"
+                max="64"
+                value="16"
+                step="1"
+              >
+
+            </div>
+
+
+            <!-- OPTIONS -->
+
+            <div
+              style="
+                display: grid;
+                gap: 14px;
+                margin-top: 22px;
+              "
+            >
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="uppercase"
+                  checked
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    accent-color: currentColor;
+                  "
+                >
+
+                <span>
+                  Include uppercase letters (A-Z)
+                </span>
+
+              </label>
+
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="lowercase"
+                  checked
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    accent-color: currentColor;
+                  "
+                >
+
+                <span>
+                  Include lowercase letters (a-z)
+                </span>
+
+              </label>
+
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="numbers"
+                  checked
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    accent-color: currentColor;
+                  "
+                >
+
+                <span>
+                  Include numbers (0-9)
+                </span>
+
+              </label>
+
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="symbols"
+                  checked
+                  style="
+                    width: 18px;
+                    height: 18px;
+                    accent-color: currentColor;
+                  "
+                >
+
+                <span>
+                  Include symbols (!@#$...)
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <!-- GENERATE -->
+
+            <div
+              class="tool-actions"
+              style="margin-top: 28px;"
+            >
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="generateBtnBottom"
+              >
+
+                Generate New Password
+
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Generate secure passwords in seconds
+          </h2>
+
+          <p>
+            Choose your preferred password length and character
+            types, then generate a random password instantly.
+            Toolora creates the password directly in your browser
+            without requiring an account.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const passwordOutput =
+      document.getElementById("passwordOutput");
+
+    const passwordStatus =
+      document.getElementById("passwordStatus");
+
+    const strengthText =
+      document.getElementById("strengthText");
+
+    const strengthDescription =
+      document.getElementById("strengthDescription");
+
+    const lengthInput =
+      document.getElementById("length");
+
+    const uppercaseInput =
+      document.getElementById("uppercase");
+
+    const lowercaseInput =
+      document.getElementById("lowercase");
+
+    const numbersInput =
+      document.getElementById("numbers");
+
+    const symbolsInput =
+      document.getElementById("symbols");
+
+    const generateBtn =
+      document.getElementById("generateBtn");
+
+    const generateBtnBottom =
+      document.getElementById("generateBtnBottom");
+
+    const copyBtn =
+      document.getElementById("copyBtn");
+
+
+    /* =====================================================
+       CHARACTER SETS
+       ===================================================== */
+
+    const uppercaseChars =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    const lowercaseChars =
+      "abcdefghijklmnopqrstuvwxyz";
+
+    const numberChars =
+      "0123456789";
+
+    const symbolChars =
+      "!@#$%^&*()_+-=[]{}|;:,.<>?";
+
+
+    /* =====================================================
+       SECURE RANDOM NUMBER
+       ===================================================== */
+
+    function secureRandom(max) {
+
+      if (
+        window.crypto &&
+        window.crypto.getRandomValues
+      ) {
+
+        const array =
+          new Uint32Array(1);
+
+        window.crypto.getRandomValues(array);
+
+        return array[0] % max;
+
+      }
+
+      return Math.floor(
+        Math.random() * max
+      );
+
+    }
+
+
+    /* =====================================================
+       GENERATE PASSWORD
+       ===================================================== */
+
+    function generatePassword() {
+
+      let length =
+        parseInt(lengthInput.value);
+
+
+      if (isNaN(length)) {
+        length = 16;
+      }
+
+
+      length =
+        Math.max(
+          4,
+          Math.min(64, length)
+        );
+
+
+      lengthInput.value =
+        length;
+
+
+      const selectedSets = [];
+
+
+      if (uppercaseInput.checked) {
+
+        selectedSets.push(
+          uppercaseChars
+        );
+
+      }
+
+
+      if (lowercaseInput.checked) {
+
+        selectedSets.push(
+          lowercaseChars
+        );
+
+      }
+
+
+      if (numbersInput.checked) {
+
+        selectedSets.push(
+          numberChars
+        );
+
+      }
+
+
+      if (symbolsInput.checked) {
+
+        selectedSets.push(
+          symbolChars
+        );
+
+      }
+
+
+      if (selectedSets.length === 0) {
+
+        passwordOutput.textContent =
+          "Select at least one option.";
+
+        passwordStatus.textContent =
+          "Choose one or more character types.";
+
+        strengthText.textContent =
+          "—";
+
+        strengthDescription.textContent =
+          "Select character types to generate a password.";
+
+        return;
+
+      }
+
+
+      let password = "";
+
+
+      /*
+       * Make sure every selected character
+       * category is represented.
+       */
+
+      for (
+        let i = 0;
+        i < selectedSets.length;
+        i++
+      ) {
+
+        const set =
+          selectedSets[i];
+
+        password +=
+          set.charAt(
+            secureRandom(set.length)
+          );
+
+      }
+
+
+      /*
+       * Fill the remaining characters.
+       */
+
+      let allCharacters = "";
+
+      selectedSets.forEach(
+        function(set) {
+
+          allCharacters += set;
+
+        }
+      );
+
+
+      while (
+        password.length < length
+      ) {
+
+        password +=
+          allCharacters.charAt(
+            secureRandom(
+              allCharacters.length
+            )
+          );
+
+      }
+
+
+      /*
+       * Shuffle the password.
+       */
+
+      password =
+        password
+          .split("")
+          .sort(
+            function() {
+
+              return (
+                secureRandom(3) - 1
+              );
+
+            }
+          )
+          .join("");
+
+
+      passwordOutput.textContent =
+        password;
+
+
+      passwordStatus.textContent =
+        `${length}-character password generated.`;
+
+      updateStrength(
+        password,
+        selectedSets.length
+      );
+
+    }
+
+
+    /* =====================================================
+       PASSWORD STRENGTH
+       ===================================================== */
+
+    function updateStrength(
+      password,
+      characterTypes
+    ) {
+
+      const length =
+        password.length;
+
+
+      let score = 0;
+
+
+      if (length >= 8) {
+        score++;
+      }
+
+      if (length >= 12) {
+        score++;
+      }
+
+      if (length >= 16) {
+        score++;
+      }
+
+      if (characterTypes >= 2) {
+        score++;
+      }
+
+      if (characterTypes >= 3) {
+        score++;
+      }
+
+      if (characterTypes >= 4) {
+        score++;
+      }
+
+
+      let strength = "";
+      let description = "";
+
+
+      if (score <= 2) {
+
+        strength =
+          "Weak";
+
+        description =
+          "Consider using a longer password with more character types.";
+
+      } else if (score <= 4) {
+
+        strength =
+          "Moderate";
+
+        description =
+          "This password has a reasonable combination of length and characters.";
+
+      } else {
+
+        strength =
+          "Strong";
+
+        description =
+          "This password uses a long length and multiple character types.";
+
+      }
+
+
+      strengthText.textContent =
+        strength;
+
+      strengthDescription.textContent =
+        description;
+
+    }
+
+
+    /* =====================================================
+       COPY PASSWORD
+       ===================================================== */
+
+    async function copyPassword() {
+
+      const password =
+        passwordOutput.textContent;
+
+
+      if (
+        !password ||
+        password === "Click Generate" ||
+        password.includes("Select at least one")
+      ) {
+
+        passwordStatus.textContent =
+          "Generate a password first.";
+
+        return;
+
+      }
+
+
+      try {
+
+        await navigator.clipboard.writeText(
+          password
+        );
+
+        passwordStatus.textContent =
+          "Password copied to clipboard.";
+
+      } catch (error) {
+
+        /*
+         * Fallback for browsers where
+         * Clipboard API is unavailable.
+         */
+
+        const textArea =
+          document.createElement("textarea");
+
+        textArea.value =
+          password;
+
+        document.body.appendChild(
+          textArea
+        );
+
+        textArea.select();
+
+        document.execCommand(
+          "copy"
+        );
+
+        textArea.remove();
+
+        passwordStatus.textContent =
+          "Password copied to clipboard.";
+
+      }
+
+    }
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    generateBtn.addEventListener(
+      "click",
+      generatePassword
+    );
+
+
+    generateBtnBottom.addEventListener(
+      "click",
+      generatePassword
+    );
+
+
+    copyBtn.addEventListener(
+      "click",
+      copyPassword
+    );
+
+
+    lengthInput.addEventListener(
+      "change",
+      function() {
+
+        let value =
+          parseInt(lengthInput.value);
+
+        if (isNaN(value)) {
+          value = 16;
+        }
+
+        lengthInput.value =
+          Math.max(
+            4,
+            Math.min(64, value)
+          );
+
+      }
+    );
+
+
+    /* =====================================================
+       INITIAL PASSWORD
+       ===================================================== */
+
+    generatePassword();
+
+  </script>
+
+</body>
+</html>
