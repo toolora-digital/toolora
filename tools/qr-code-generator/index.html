@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>QR Code Generator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Create and download QR codes for URLs, text, contact information, and more with Toolora's free online QR code generator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link active"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Productivity & Sharing
+          </span>
+
+          <h1>
+            QR Code
+            <span class="gradient-text">
+              Generator
+            </span>
+          </h1>
+
+          <p>
+            Create a QR code from any URL or text.
+            Generate, scan, and download your QR code instantly.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                QR Code Generator
+              </span>
+
+              <h2>
+                Create your QR code
+              </h2>
+
+              <p>
+                Enter a URL or text below and generate a QR code.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 INPUT
+                 ================================================= -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="qrText"
+              >
+                Text or URL
+              </label>
+
+              <textarea
+                class="input"
+                id="qrText"
+                rows="4"
+                placeholder="https://example.com"
+                style="resize: vertical; min-height: 120px;"
+              ></textarea>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="generateBtn"
+              >
+
+                Generate QR Code
+
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="clearBtn"
+              >
+                Clear
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 QR RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="
+                margin-top: 28px;
+                text-align: center;
+              "
+            >
+
+              <div class="result-label">
+                Your QR Code
+              </div>
+
+
+              <div
+                id="qrContainer"
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  min-height: 260px;
+                  margin: 22px auto;
+                  padding: 20px;
+                  background: #ffffff;
+                  border-radius: 18px;
+                  width: min(100%, 300px);
+                  box-sizing: border-box;
+                "
+              >
+
+                <div
+                  id="qrPlaceholder"
+                  style="
+                    color: #777;
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                  "
+                >
+                  Your QR code will appear here.
+                </div>
+
+              </div>
+
+
+              <p
+                class="result-description"
+                id="qrStatus"
+              >
+                Enter something above to create a QR code.
+              </p>
+
+
+              <div class="tool-actions">
+
+                <button
+                  class="btn btn-primary"
+                  type="button"
+                  id="downloadBtn"
+                  disabled
+                >
+                  Download PNG
+                </button>
+
+
+                <button
+                  class="btn btn-secondary"
+                  type="button"
+                  id="copyTextBtn"
+                >
+                  Copy Text
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUICK EXAMPLES
+                 ================================================= -->
+
+            <div
+              class="tool-panel-header"
+              style="margin-top: 40px;"
+            >
+
+              <span class="card-category">
+                Quick Examples
+              </span>
+
+              <h2>
+                What can you encode?
+              </h2>
+
+              <p>
+                QR codes can store many types of text-based information.
+              </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-example="https://www.google.com"
+              >
+                Website URL
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-example="Hello from Toolora!"
+              >
+                Plain Text
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-example="mailto:hello@example.com"
+              >
+                Email
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-example="tel:+1234567890"
+              >
+                Phone Number
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Generate a QR code in seconds
+          </h2>
+
+          <p>
+            Enter a website URL, text, email address, phone number,
+            or other text-based information. Toolora converts it
+            into a QR code that can be scanned with a compatible
+            smartphone or QR scanner.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       QR CODE LIBRARY
+       ===================================================== -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const qrText =
+      document.getElementById("qrText");
+
+    const generateBtn =
+      document.getElementById("generateBtn");
+
+    const clearBtn =
+      document.getElementById("clearBtn");
+
+    const downloadBtn =
+      document.getElementById("downloadBtn");
+
+    const copyTextBtn =
+      document.getElementById("copyTextBtn");
+
+    const qrContainer =
+      document.getElementById("qrContainer");
+
+    const qrStatus =
+      document.getElementById("qrStatus");
+
+    const qrPlaceholder =
+      document.getElementById("qrPlaceholder");
+
+
+    let currentQR = null;
+
+
+    /* =====================================================
+       GENERATE QR CODE
+       ===================================================== */
+
+    function generateQRCode() {
+
+      const text =
+        qrText.value.trim();
+
+
+      if (!text) {
+
+        qrStatus.textContent =
+          "Please enter some text or a URL first.";
+
+        return;
+
+      }
+
+
+      /*
+       * Clear previous QR code.
+       */
+
+      qrContainer.innerHTML = "";
+
+
+      /*
+       * Generate new QR code.
+       */
+
+      currentQR =
+        new QRCode(
+          qrContainer,
+          {
+            text: text,
+            width: 220,
+            height: 220,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel:
+              QRCode.CorrectLevel.H
+          }
+        );
+
+
+      qrStatus.textContent =
+        "QR code generated successfully.";
+
+      downloadBtn.disabled =
+        false;
+
+    }
+
+
+    /* =====================================================
+       DOWNLOAD QR CODE
+       ===================================================== */
+
+    function downloadQRCode() {
+
+      if (!currentQR) {
+
+        qrStatus.textContent =
+          "Generate a QR code first.";
+
+        return;
+
+      }
+
+
+      const canvas =
+        qrContainer.querySelector("canvas");
+
+      const image =
+        qrContainer.querySelector("img");
+
+
+      if (canvas) {
+
+        const link =
+          document.createElement("a");
+
+        link.download =
+          "toolora-qr-code.png";
+
+        link.href =
+          canvas.toDataURL(
+            "image/png"
+          );
+
+        link.click();
+
+        qrStatus.textContent =
+          "QR code downloaded.";
+
+        return;
+
+      }
+
+
+      /*
+       * Fallback if the library returns
+       * an image instead of a canvas.
+       */
+
+      if (image) {
+
+        const link =
+          document.createElement("a");
+
+        link.download =
+          "toolora-qr-code.png";
+
+        link.href =
+          image.src;
+
+        link.click();
+
+        qrStatus.textContent =
+          "QR code downloaded.";
+
+      }
+
+    }
+
+
+    /* =====================================================
+       CLEAR
+       ===================================================== */
+
+    function clearQRCode() {
+
+      qrText.value =
+        "";
+
+      qrContainer.innerHTML =
+        `
+          <div
+            id="qrPlaceholder"
+            style="
+              color: #777;
+              font-size: 0.95rem;
+              line-height: 1.5;
+            "
+          >
+            Your QR code will appear here.
+          </div>
+        `;
+
+
+      qrStatus.textContent =
+        "Enter something above to create a QR code.";
+
+      downloadBtn.disabled =
+        true;
+
+      currentQR =
+        null;
+
+    }
+
+
+    /* =====================================================
+       COPY TEXT
+       ===================================================== */
+
+    async function copyText() {
+
+      const text =
+        qrText.value.trim();
+
+
+      if (!text) {
+
+        qrStatus.textContent =
+          "Enter some text first.";
+
+        return;
+
+      }
+
+
+      try {
+
+        await navigator.clipboard.writeText(
+          text
+        );
+
+        qrStatus.textContent =
+          "Text copied to clipboard.";
+
+      } catch (error) {
+
+        const textArea =
+          document.createElement("textarea");
+
+        textArea.value =
+          text;
+
+        document.body.appendChild(
+          textArea
+        );
+
+        textArea.select();
+
+        document.execCommand(
+          "copy"
+        );
+
+        textArea.remove();
+
+        qrStatus.textContent =
+          "Text copied to clipboard.";
+
+      }
+
+    }
+
+
+    /* =====================================================
+       EXAMPLE BUTTONS
+       ===================================================== */
+
+    const exampleButtons =
+      document.querySelectorAll(
+        "[data-example]"
+      );
+
+
+    exampleButtons.forEach(
+      function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            qrText.value =
+              button.dataset.example;
+
+            generateQRCode();
+
+          }
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    generateBtn.addEventListener(
+      "click",
+      generateQRCode
+    );
+
+
+    clearBtn.addEventListener(
+      "click",
+      clearQRCode
+    );
+
+
+    downloadBtn.addEventListener(
+      "click",
+      downloadQRCode
+    );
+
+
+    copyTextBtn.addEventListener(
+      "click",
+      copyText
+    );
+
+
+    /* =====================================================
+       ENTER / CTRL + ENTER
+       ===================================================== */
+
+    qrText.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (
+          event.ctrlKey &&
+          event.key === "Enter"
+        ) {
+
+          generateQRCode();
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
+```
