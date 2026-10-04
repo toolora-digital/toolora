@@ -1,0 +1,1148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Word Counter — Toolora</title>
+
+  <meta
+    name="description"
+    content="Count words, characters, sentences, paragraphs, and reading time with Toolora's free online word counter."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>
+          Toolora
+        </span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link active"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Writing & Productivity
+          </span>
+
+          <h1>
+            Word
+            <span class="gradient-text">
+              Counter
+            </span>
+          </h1>
+
+          <p>
+            Count words, characters, sentences, paragraphs,
+            and reading time instantly with a simple online tool.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Word Counter
+              </span>
+
+              <h2>
+                Analyze your text
+              </h2>
+
+              <p>
+                Paste or type your text below to see detailed
+                writing statistics.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 TEXT AREA
+                 ================================================= -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="textInput"
+              >
+                Your Text
+              </label>
+
+              <textarea
+                class="input word-counter-textarea"
+                id="textInput"
+                placeholder="Start typing or paste your text here..."
+                spellcheck="true"
+              ></textarea>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="clearBtn"
+              >
+
+                Clear Text
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="copyBtn"
+              >
+                Copy Text
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="margin-top: 28px;"
+            >
+
+              <div class="result-label">
+                Text Statistics
+              </div>
+
+
+              <div class="stats-grid">
+
+                <div class="stat-card">
+
+                  <span class="stat-value" id="wordCount">
+                    0
+                  </span>
+
+                  <span class="stat-label">
+                    Words
+                  </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                  <span class="stat-value" id="characterCount">
+                    0
+                  </span>
+
+                  <span class="stat-label">
+                    Characters
+                  </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                  <span class="stat-value" id="characterNoSpaces">
+                    0
+                  </span>
+
+                  <span class="stat-label">
+                    Without Spaces
+                  </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                  <span class="stat-value" id="sentenceCount">
+                    0
+                  </span>
+
+                  <span class="stat-label">
+                    Sentences
+                  </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                  <span class="stat-value" id="paragraphCount">
+                    0
+                  </span>
+
+                  <span class="stat-label">
+                    Paragraphs
+                  </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                  <span class="stat-value" id="readingTime">
+                    0 min
+                  </span>
+
+                  <span class="stat-label">
+                    Reading Time
+                  </span>
+
+                </div>
+
+              </div>
+
+
+              <p
+                class="result-description"
+                id="status"
+              >
+                Start typing to see your statistics.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    Average Word Length
+                  </span>
+
+                  <span id="averageWordLength">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Estimated Speaking Time
+                  </span>
+
+                  <span id="speakingTime">
+                    0 min
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Estimated Reading Speed
+                  </span>
+
+                  <span>
+                    200 words/min
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Get instant text statistics
+          </h2>
+
+          <p>
+            Toolora analyzes your text directly in your browser.
+            Nothing needs to be uploaded to a server, making it
+            quick and convenient for everyday writing tasks.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const textInput =
+      document.getElementById(
+        "textInput"
+      );
+
+
+    const clearBtn =
+      document.getElementById(
+        "clearBtn"
+      );
+
+
+    const copyBtn =
+      document.getElementById(
+        "copyBtn"
+      );
+
+
+    const wordCount =
+      document.getElementById(
+        "wordCount"
+      );
+
+
+    const characterCount =
+      document.getElementById(
+        "characterCount"
+      );
+
+
+    const characterNoSpaces =
+      document.getElementById(
+        "characterNoSpaces"
+      );
+
+
+    const sentenceCount =
+      document.getElementById(
+        "sentenceCount"
+      );
+
+
+    const paragraphCount =
+      document.getElementById(
+        "paragraphCount"
+      );
+
+
+    const readingTime =
+      document.getElementById(
+        "readingTime"
+      );
+
+
+    const speakingTime =
+      document.getElementById(
+        "speakingTime"
+      );
+
+
+    const averageWordLength =
+      document.getElementById(
+        "averageWordLength"
+      );
+
+
+    const status =
+      document.getElementById(
+        "status"
+      );
+
+
+    /* =====================================================
+       COUNT WORDS
+       ===================================================== */
+
+    function countWords(
+      text
+    ) {
+
+      const trimmed =
+        text.trim();
+
+
+      if (!trimmed) {
+
+        return 0;
+
+      }
+
+
+      /*
+       * Unicode-aware word detection.
+       * Falls back to whitespace splitting
+       * if the browser does not support it.
+       */
+
+      try {
+
+        const words =
+          trimmed.match(
+            /[\p{L}\p{N}]+(?:['’_-][\p{L}\p{N}]+)*/gu
+          );
+
+
+        return words
+          ? words.length
+          : 0;
+
+      } catch (error) {
+
+        return trimmed
+          .split(/\s+/)
+          .filter(Boolean)
+          .length;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       COUNT SENTENCES
+       ===================================================== */
+
+    function countSentences(
+      text
+    ) {
+
+      const trimmed =
+        text.trim();
+
+
+      if (!trimmed) {
+
+        return 0;
+
+      }
+
+
+      const matches =
+        trimmed.match(
+          /[^.!?؟]+[.!?؟]+(?=\s|$)|[^.!?؟]+$/g
+        );
+
+
+      return matches
+        ? matches
+            .map(
+              sentence =>
+                sentence.trim()
+            )
+            .filter(Boolean)
+            .length
+        : 0;
+
+    }
+
+
+    /* =====================================================
+       COUNT PARAGRAPHS
+       ===================================================== */
+
+    function countParagraphs(
+      text
+    ) {
+
+      const trimmed =
+        text.trim();
+
+
+      if (!trimmed) {
+
+        return 0;
+
+      }
+
+
+      return trimmed
+        .split(
+          /\n\s*\n/
+        )
+        .map(
+          paragraph =>
+            paragraph.trim()
+        )
+        .filter(Boolean)
+        .length;
+
+    }
+
+
+    /* =====================================================
+       FORMAT TIME
+       ===================================================== */
+
+    function formatMinutes(
+      minutes
+    ) {
+
+      if (
+        minutes < 1
+      ) {
+
+        return "< 1 min";
+
+      }
+
+
+      if (
+        minutes === 1
+      ) {
+
+        return "1 min";
+
+      }
+
+
+      return `${minutes} min`;
+
+    }
+
+
+    /* =====================================================
+       UPDATE STATISTICS
+       ===================================================== */
+
+    function updateStats() {
+
+      const text =
+        textInput.value;
+
+
+      const words =
+        countWords(
+          text
+        );
+
+
+      const characters =
+        text.length;
+
+
+      const charactersWithoutSpaces =
+        text.replace(
+          /\s/g,
+          ""
+        ).length;
+
+
+      const sentences =
+        countSentences(
+          text
+        );
+
+
+      const paragraphs =
+        countParagraphs(
+          text
+        );
+
+
+      /*
+       * Average reading speed:
+       * 200 words per minute.
+       */
+
+      const readingMinutes =
+        Math.ceil(
+          words / 200
+        );
+
+
+      /*
+       * Average speaking speed:
+       * 130 words per minute.
+       */
+
+      const speakingMinutes =
+        Math.ceil(
+          words / 130
+        );
+
+
+      let averageLength =
+        0;
+
+
+      if (
+        words > 0
+      ) {
+
+        averageLength =
+          charactersWithoutSpaces /
+          words;
+
+      }
+
+
+      wordCount.textContent =
+        words.toLocaleString();
+
+
+      characterCount.textContent =
+        characters.toLocaleString();
+
+
+      characterNoSpaces.textContent =
+        charactersWithoutSpaces.toLocaleString();
+
+
+      sentenceCount.textContent =
+        sentences.toLocaleString();
+
+
+      paragraphCount.textContent =
+        paragraphs.toLocaleString();
+
+
+      readingTime.textContent =
+        formatMinutes(
+          readingMinutes
+        );
+
+
+      speakingTime.textContent =
+        formatMinutes(
+          speakingMinutes
+        );
+
+
+      averageWordLength.textContent =
+        averageLength
+          ? averageLength.toFixed(1)
+          : "0";
+
+
+      if (!text.trim()) {
+
+        status.textContent =
+          "Start typing to see your statistics.";
+
+      } else {
+
+        status.textContent =
+          `${words.toLocaleString()} words analyzed.`;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       CLEAR
+       ===================================================== */
+
+    clearBtn.addEventListener(
+      "click",
+      function() {
+
+        textInput.value =
+          "";
+
+        updateStats();
+
+        textInput.focus();
+
+      }
+    );
+
+
+    /* =====================================================
+       COPY
+       ===================================================== */
+
+    copyBtn.addEventListener(
+      "click",
+      async function() {
+
+        const text =
+          textInput.value;
+
+
+        if (!text) {
+
+          status.textContent =
+            "There is no text to copy.";
+
+          return;
+
+        }
+
+
+        try {
+
+          await navigator.clipboard.writeText(
+            text
+          );
+
+
+          status.textContent =
+            "Text copied to clipboard.";
+
+        } catch (error) {
+
+          status.textContent =
+            "Unable to copy automatically.";
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       LIVE UPDATE
+       ===================================================== */
+
+    textInput.addEventListener(
+      "input",
+      updateStats
+    );
+
+
+    /* =====================================================
+       INITIALIZE
+       ===================================================== */
+
+    updateStats();
+
+  </script>
+
+
+  <!-- =====================================================
+       COMPONENT STYLING
+       ===================================================== -->
+
+  <style>
+
+    .word-counter-textarea {
+
+      width: 100%;
+
+      min-height: 240px;
+
+      resize: vertical;
+
+      line-height: 1.7;
+
+      font-family: inherit;
+
+    }
+
+
+    .stats-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 12px;
+
+      margin-top: 18px;
+
+    }
+
+
+    .stat-card {
+
+      padding: 18px 14px;
+
+      border-radius: 14px;
+
+      border: 1px solid
+        rgba(0, 0, 0, 0.07);
+
+      background:
+        rgba(255, 255, 255, 0.68);
+
+      text-align: center;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    }
+
+
+    .stat-card:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.06);
+
+    }
+
+
+    .stat-value {
+
+      display: block;
+
+      font-size: 24px;
+
+      line-height: 1.2;
+
+      font-weight: 700;
+
+    }
+
+
+    .stat-label {
+
+      display: block;
+
+      margin-top: 6px;
+
+      font-size: 12px;
+
+      opacity: 0.65;
+
+    }
+
+
+    @media (
+      max-width: 700px
+    ) {
+
+      .stats-grid {
+
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+      }
+
+    }
+
+  </style>
+
+</body>
+</html>
