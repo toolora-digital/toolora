@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Compound Interest Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate compound interest, total investment value and estimated growth with Toolora's free compound interest calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark">
+
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8 7h9v9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+        </span>
+
+        Toolora
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="../../index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="../index.html" class="nav-link active">
+          Calculators
+        </a>
+
+        <a href="../../tools/index.html" class="nav-link">
+          Tools
+        </a>
+
+        <a href="../../games/index.html" class="nav-link">
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../index.html"
+          class="btn btn-secondary"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="icon-btn mobile-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7h16M4 12h16M4 17h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+
+    <!-- INTRO -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Finance Calculator
+          </span>
+
+          <h1>
+            Compound Interest Calculator
+          </h1>
+
+          <p>
+            Calculate how your money could grow over time
+            with compound interest and regular contributions.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALCULATOR
+         ===================================================== -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="tool-panel">
+
+
+          <div class="tool-panel-header">
+
+            <span class="card-category">
+              Compound Interest
+            </span>
+
+            <h2>
+              Calculate investment growth
+            </h2>
+
+            <p>
+              Enter your initial investment, contribution,
+              interest rate and investment period.
+            </p>
+
+          </div>
+
+
+
+          <!-- =================================================
+               INPUTS
+               ================================================= -->
+
+          <div class="form-grid">
+
+
+            <!-- INITIAL INVESTMENT -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="initialInvestment"
+              >
+                Initial investment
+              </label>
+
+              <input
+                class="input"
+                id="initialInvestment"
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="e.g. 100000"
+              >
+
+              <span class="form-hint">
+                Starting amount
+              </span>
+
+            </div>
+
+
+
+            <!-- MONTHLY CONTRIBUTION -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="monthlyContribution"
+              >
+                Monthly contribution
+              </label>
+
+              <input
+                class="input"
+                id="monthlyContribution"
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="e.g. 10000"
+              >
+
+              <span class="form-hint">
+                Amount added every month
+              </span>
+
+            </div>
+
+
+
+            <!-- INTEREST RATE -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="interestRate"
+              >
+                Annual interest rate
+              </label>
+
+              <input
+                class="input"
+                id="interestRate"
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="e.g. 10"
+              >
+
+              <span class="form-hint">
+                Percentage per year
+              </span>
+
+            </div>
+
+
+
+            <!-- YEARS -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="investmentYears"
+              >
+                Investment period
+              </label>
+
+              <input
+                class="input"
+                id="investmentYears"
+                type="number"
+                min="1"
+                max="100"
+                step="1"
+                placeholder="e.g. 10"
+              >
+
+              <span class="form-hint">
+                Number of years
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- =================================================
+               COMPOUNDING FREQUENCY
+               ================================================= -->
+
+          <div
+            class="form-group"
+            style="margin-top:20px;"
+          >
+
+            <label class="form-label">
+              Compounding frequency
+            </label>
+
+
+            <div class="segmented-control">
+
+              <button
+                type="button"
+                class="segmented-option"
+                data-frequency="1"
+              >
+                Annually
+              </button>
+
+
+              <button
+                type="button"
+                class="segmented-option"
+                data-frequency="4"
+              >
+                Quarterly
+              </button>
+
+
+              <button
+                type="button"
+                class="segmented-option active"
+                data-frequency="12"
+              >
+                Monthly
+              </button>
+
+
+              <button
+                type="button"
+                class="segmented-option"
+                data-frequency="365"
+              >
+                Daily
+              </button>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =================================================
+               ACTIONS
+               ================================================= -->
+
+          <div class="tool-actions">
+
+            <button
+              type="button"
+              id="calculateButton"
+              class="btn btn-primary btn-large"
+            >
+
+              Calculate Growth
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </button>
+
+
+            <button
+              type="button"
+              id="resetButton"
+              class="btn btn-secondary btn-large"
+            >
+              Reset
+            </button>
+
+          </div>
+
+
+
+          <div class="tool-divider"></div>
+
+
+
+          <!-- =================================================
+               RESULT
+               ================================================= -->
+
+          <div class="result-panel">
+
+            <div class="result-label">
+              Future Value
+            </div>
+
+
+            <div
+              class="result-number"
+              id="futureValue"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-description"
+              id="resultDescription"
+            >
+              Enter your investment details to see the
+              estimated future value.
+            </div>
+
+
+            <div class="result-breakdown">
+
+
+              <div class="result-row">
+
+                <span>
+                  Initial investment
+                </span>
+
+                <span id="initialResult">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Total contributions
+                </span>
+
+                <span id="contributionsResult">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Total amount invested
+                </span>
+
+                <span id="investedResult">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Interest earned
+                </span>
+
+                <span id="interestResult">
+                  —
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <span class="eyebrow">
+              How it works
+            </span>
+
+            <h2 style="margin-top:12px;">
+              The power of compounding
+            </h2>
+
+            <p style="margin-top:14px;">
+              Compound interest allows returns to be added
+              to your balance, so future returns can be earned
+              on both your original money and previously earned
+              returns.
+            </p>
+
+            <p style="margin-top:14px;">
+              This calculator also accounts for regular monthly
+              contributions, giving you an estimate of how your
+              total investment could grow over time.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </span>
+
+            Toolora
+
+          </a>
+
+
+          <p>
+            Beautifully engineered tools for everyday
+            calculations, productivity and learning.
+          </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <h4>
+            Tools
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Productivity
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /*
+     * ELEMENTS
+     */
+
+    const initialInvestment =
+      document.getElementById("initialInvestment");
+
+    const monthlyContribution =
+      document.getElementById("monthlyContribution");
+
+    const interestRate =
+      document.getElementById("interestRate");
+
+    const investmentYears =
+      document.getElementById("investmentYears");
+
+    const calculateButton =
+      document.getElementById("calculateButton");
+
+    const resetButton =
+      document.getElementById("resetButton");
+
+    const futureValue =
+      document.getElementById("futureValue");
+
+    const resultDescription =
+      document.getElementById("resultDescription");
+
+    const initialResult =
+      document.getElementById("initialResult");
+
+    const contributionsResult =
+      document.getElementById("contributionsResult");
+
+    const investedResult =
+      document.getElementById("investedResult");
+
+    const interestResult =
+      document.getElementById("interestResult");
+
+    const frequencyButtons =
+      document.querySelectorAll(
+        "[data-frequency]"
+      );
+
+
+    /*
+     * DEFAULT COMPOUNDING
+     */
+
+    let compoundsPerYear = 12;
+
+
+    /*
+     * CURRENCY FORMAT
+     *
+     * Using a neutral currency display keeps
+     * the calculator usable internationally.
+     */
+
+    function formatMoney(value) {
+
+      return value.toLocaleString(
+        undefined,
+        {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }
+      );
+
+    }
+
+
+    /*
+     * FREQUENCY BUTTONS
+     */
+
+    frequencyButtons.forEach(
+      function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            frequencyButtons.forEach(
+              function(item) {
+
+                item.classList.remove("active");
+
+              }
+            );
+
+
+            button.classList.add("active");
+
+
+            compoundsPerYear =
+              Number(
+                button.dataset.frequency
+              );
+
+          }
+        );
+
+      }
+    );
+
+
+    /*
+     * CALCULATE
+     */
+
+    calculateButton.addEventListener(
+      "click",
+      function() {
+
+        const principal =
+          parseFloat(
+            initialInvestment.value
+          );
+
+
+        const monthly =
+          parseFloat(
+            monthlyContribution.value
+          ) || 0;
+
+
+        const annualRate =
+          parseFloat(
+            interestRate.value
+          );
+
+
+        const years =
+          parseFloat(
+            investmentYears.value
+          );
+
+
+        /*
+         * VALIDATION
+         */
+
+        if (
+          isNaN(principal) ||
+          principal < 0
+        ) {
+
+          showError(
+            "Please enter a valid initial investment."
+          );
+
+          return;
+
+        }
+
+
+        if (
+          isNaN(annualRate) ||
+          annualRate < 0
+        ) {
+
+          showError(
+            "Please enter a valid annual interest rate."
+          );
+
+          return;
+
+        }
+
+
+        if (
+          isNaN(years) ||
+          years <= 0
+        ) {
+
+          showError(
+            "Please enter a valid investment period."
+          );
+
+          return;
+
+        }
+
+
+        /*
+         * MONTHLY CONTRIBUTION VALIDATION
+         */
+
+        if (monthly < 0) {
+
+          showError(
+            "Monthly contribution cannot be negative."
+          );
+
+          return;
+
+        }
+
+
+        /*
+         * CALCULATION
+         *
+         * The principal compounds according
+         * to the selected frequency.
+         *
+         * Monthly contributions are added
+         * at the end of each month.
+         */
+
+        const rate =
+          annualRate / 100;
+
+
+        const totalMonths =
+          Math.round(years * 12);
+
+
+        let balance =
+          principal;
+
+
+        /*
+         * Monthly equivalent rate.
+         *
+         * This keeps regular contributions
+         * integrated into the calculation.
+         */
+
+        const monthlyRate =
+          Math.pow(
+            1 + rate / compoundsPerYear,
+            compoundsPerYear / 12
+          ) - 1;
+
+
+        for (
+          let month = 1;
+          month <= totalMonths;
+          month++
+        ) {
+
+          balance =
+            balance *
+            (1 + monthlyRate);
+
+
+          balance += monthly;
+
+        }
+
+
+        /*
+         * TOTAL CONTRIBUTIONS
+         */
+
+        const totalContributions =
+          monthly *
+          totalMonths;
+
+
+        const totalInvested =
+          principal +
+          totalContributions;
+
+
+        const interestEarned =
+          balance -
+          totalInvested;
+
+
+        /*
+         * DISPLAY
+         */
+
+        futureValue.textContent =
+          formatMoney(balance);
+
+
+        initialResult.textContent =
+          formatMoney(principal);
+
+
+        contributionsResult.textContent =
+          formatMoney(totalContributions);
+
+
+        investedResult.textContent =
+          formatMoney(totalInvested);
+
+
+        interestResult.textContent =
+          formatMoney(interestEarned);
+
+
+        resultDescription.textContent =
+          `Estimated value after ${years} year${years === 1 ? "" : "s"} at ${annualRate}% annual interest.`;
+
+
+        /*
+         * RESULT ANIMATION
+         */
+
+        futureValue.animate(
+          [
+            {
+              opacity: 0,
+              transform: "translateY(8px)"
+            },
+
+            {
+              opacity: 1,
+              transform: "translateY(0)"
+            }
+          ],
+          {
+            duration: 350,
+            easing:
+              "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        );
+
+      }
+    );
+
+
+    /*
+     * ERROR MESSAGE
+     */
+
+    function showError(message) {
+
+      futureValue.textContent =
+        "—";
+
+      resultDescription.textContent =
+        message;
+
+      initialResult.textContent =
+        "—";
+
+      contributionsResult.textContent =
+        "—";
+
+      investedResult.textContent =
+        "—";
+
+      interestResult.textContent =
+        "—";
+
+    }
+
+
+    /*
+     * RESET
+     */
+
+    resetButton.addEventListener(
+      "click",
+      function() {
+
+        initialInvestment.value =
+          "";
+
+        monthlyContribution.value =
+          "";
+
+        interestRate.value =
+          "";
+
+        investmentYears.value =
+          "";
+
+
+        futureValue.textContent =
+          "—";
+
+
+        resultDescription.textContent =
+          "Enter your investment details to see the estimated future value.";
+
+
+        initialResult.textContent =
+          "—";
+
+
+        contributionsResult.textContent =
+          "—";
+
+
+        investedResult.textContent =
+          "—";
+
+
+        interestResult.textContent =
+          "—";
+
+
+        /*
+         * Reset frequency to monthly
+         */
+
+        compoundsPerYear = 12;
+
+
+        frequencyButtons.forEach(
+          function(button) {
+
+            button.classList.remove("active");
+
+          }
+        );
+
+
+        document
+          .querySelector(
+            '[data-frequency="12"]'
+          )
+          .classList.add("active");
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
