@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Loan Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate monthly loan payments, total interest, and total repayment with Toolora's free loan calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="../../index.html" class="nav-link">
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link active"
+        >
+          Calculators
+        </a>
+
+        <a href="../../tools/index.html" class="nav-link">
+          Tools
+        </a>
+
+        <a href="../../games/index.html" class="nav-link">
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../calculators/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Calculators
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <!-- ===================================================
+         HERO
+         =================================================== -->
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Finance
+          </span>
+
+          <h1>
+            Loan
+            <span class="gradient-text">
+              Calculator
+            </span>
+          </h1>
+
+          <p>
+            Estimate your monthly payment, total interest,
+            and total repayment quickly and easily.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+
+            <!-- HEADER -->
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Loan Calculator
+              </span>
+
+              <h2>
+                Calculate your loan payment
+              </h2>
+
+              <p>
+                Enter your loan amount, interest rate,
+                and repayment period below.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 INPUTS
+                 ================================================= -->
+
+            <div class="form-grid">
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="loanAmount"
+                >
+                  Loan Amount
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="loanAmount"
+                  placeholder="e.g. 1000000"
+                  min="0"
+                  step="0.01"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="interestRate"
+                >
+                  Annual Interest Rate
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="interestRate"
+                  placeholder="e.g. 12"
+                  min="0"
+                  step="0.01"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="loanTerm"
+                >
+                  Loan Term
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="loanTerm"
+                  placeholder="e.g. 5"
+                  min="1"
+                  step="1"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="termType"
+                >
+                  Term Type
+                </label>
+
+                <select
+                  class="select"
+                  id="termType"
+                >
+
+                  <option value="years">
+                    Years
+                  </option>
+
+                  <option value="months">
+                    Months
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="calculateBtn"
+              >
+
+                Calculate Loan
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="resetBtn"
+              >
+                Reset
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              id="resultPanel"
+              style="margin-top: 28px;"
+            >
+
+              <button
+                class="icon-btn copy-button"
+                type="button"
+                id="copyBtn"
+                aria-label="Copy result"
+                title="Copy result"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+
+                  <rect
+                    x="9"
+                    y="9"
+                    width="10"
+                    height="10"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+
+                  <path
+                    d="M15 9V7C15 5.895 14.105 5 13 5H7C5.895 5 5 5.895 5 7V13C5 14.105 5.895 15 7 15H9"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <div class="result-label">
+                Monthly Payment
+              </div>
+
+
+              <div
+                class="result-number"
+                id="monthlyPayment"
+              >
+                0
+              </div>
+
+
+              <p
+                class="result-description"
+                id="resultDescription"
+              >
+                Enter your loan details to calculate your payment.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    Loan Amount
+                  </span>
+
+                  <span id="loanAmountResult">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Interest Rate
+                  </span>
+
+                  <span id="interestResult">
+                    0%
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Total Interest
+                  </span>
+
+                  <span id="totalInterest">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Total Repayment
+                  </span>
+
+                  <span id="totalPayment">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Number of Payments
+                  </span>
+
+                  <span id="numberPayments">
+                    0
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         INFORMATION
+         =================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Understand your loan costs
+          </h2>
+
+          <p>
+            Enter your loan amount, annual interest rate,
+            and repayment period. Toolora calculates your
+            estimated monthly payment, total interest,
+            and total repayment.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const loanAmountInput =
+      document.getElementById("loanAmount");
+
+    const interestRateInput =
+      document.getElementById("interestRate");
+
+    const loanTermInput =
+      document.getElementById("loanTerm");
+
+    const termTypeInput =
+      document.getElementById("termType");
+
+    const calculateBtn =
+      document.getElementById("calculateBtn");
+
+    const resetBtn =
+      document.getElementById("resetBtn");
+
+    const copyBtn =
+      document.getElementById("copyBtn");
+
+    const monthlyPayment =
+      document.getElementById("monthlyPayment");
+
+    const loanAmountResult =
+      document.getElementById("loanAmountResult");
+
+    const interestResult =
+      document.getElementById("interestResult");
+
+    const totalInterest =
+      document.getElementById("totalInterest");
+
+    const totalPayment =
+      document.getElementById("totalPayment");
+
+    const numberPayments =
+      document.getElementById("numberPayments");
+
+    const resultDescription =
+      document.getElementById("resultDescription");
+
+
+    /* =====================================================
+       FORMAT NUMBER
+       ===================================================== */
+
+    function formatNumber(number) {
+
+      return new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: 2
+      }).format(number);
+
+    }
+
+
+    /* =====================================================
+       CALCULATE LOAN
+       ===================================================== */
+
+    function calculateLoan() {
+
+      const principal =
+        parseFloat(loanAmountInput.value);
+
+      const annualRate =
+        parseFloat(interestRateInput.value);
+
+      const term =
+        parseFloat(loanTermInput.value);
+
+
+      if (
+        isNaN(principal) ||
+        isNaN(annualRate) ||
+        isNaN(term) ||
+        principal <= 0 ||
+        annualRate < 0 ||
+        term <= 0
+      ) {
+
+        resultDescription.textContent =
+          "Please enter a valid loan amount, interest rate, and loan term.";
+
+        return;
+
+      }
+
+
+      let payments;
+
+
+      if (termTypeInput.value === "years") {
+
+        payments =
+          Math.round(term * 12);
+
+      } else {
+
+        payments =
+          Math.round(term);
+
+      }
+
+
+      const monthlyRate =
+        annualRate / 100 / 12;
+
+
+      let payment;
+
+
+      if (monthlyRate === 0) {
+
+        payment =
+          principal / payments;
+
+      } else {
+
+        const factor =
+          Math.pow(
+            1 + monthlyRate,
+            payments
+          );
+
+        payment =
+          principal *
+          (
+            monthlyRate * factor
+          )
+          /
+          (
+            factor - 1
+          );
+
+      }
+
+
+      const total =
+        payment * payments;
+
+      const interest =
+        total - principal;
+
+
+      monthlyPayment.textContent =
+        formatNumber(payment);
+
+      loanAmountResult.textContent =
+        formatNumber(principal);
+
+      interestResult.textContent =
+        annualRate + "%";
+
+      totalInterest.textContent =
+        formatNumber(interest);
+
+      totalPayment.textContent =
+        formatNumber(total);
+
+      numberPayments.textContent =
+        payments;
+
+
+      resultDescription.textContent =
+        `Estimated monthly payment over ${payments} payments.`;
+
+    }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    function resetCalculator() {
+
+      loanAmountInput.value = "";
+
+      interestRateInput.value = "";
+
+      loanTermInput.value = "";
+
+      termTypeInput.value = "years";
+
+
+      monthlyPayment.textContent =
+        "0";
+
+      loanAmountResult.textContent =
+        "0";
+
+      interestResult.textContent =
+        "0%";
+
+      totalInterest.textContent =
+        "0";
+
+      totalPayment.textContent =
+        "0";
+
+      numberPayments.textContent =
+        "0";
+
+
+      resultDescription.textContent =
+        "Enter your loan details to calculate your payment.";
+
+    }
+
+
+    /* =====================================================
+       COPY
+       ===================================================== */
+
+    async function copyResult() {
+
+      const text =
+        `Monthly Payment: ${monthlyPayment.textContent}\n` +
+        `Loan Amount: ${loanAmountResult.textContent}\n` +
+        `Interest Rate: ${interestResult.textContent}\n` +
+        `Total Interest: ${totalInterest.textContent}\n` +
+        `Total Repayment: ${totalPayment.textContent}\n` +
+        `Number of Payments: ${numberPayments.textContent}`;
+
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+        copyBtn.setAttribute(
+          "title",
+          "Copied!"
+        );
+
+
+        setTimeout(() => {
+
+          copyBtn.setAttribute(
+            "title",
+            "Copy result"
+          );
+
+        }, 1500);
+
+
+      } catch (error) {
+
+        console.log("Copy failed.");
+
+      }
+
+    }
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    calculateBtn.addEventListener(
+      "click",
+      calculateLoan
+    );
+
+
+    resetBtn.addEventListener(
+      "click",
+      resetCalculator
+    );
+
+
+    copyBtn.addEventListener(
+      "click",
+      copyResult
+    );
+
+
+    loanAmountInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateLoan();
+        }
+
+      }
+    );
+
+
+    interestRateInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateLoan();
+        }
+
+      }
+    );
+
+
+    loanTermInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateLoan();
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
