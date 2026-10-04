@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Percentage Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate percentages quickly and accurately with Toolora's free online percentage calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M7 17L17 7M8 7h9v9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+        </span>
+
+        Toolora
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../index.html"
+          class="nav-link active"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../index.html"
+          class="btn btn-secondary"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        aria-label="Open menu"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M4 7h16M4 12h16M4 17h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main>
+
+
+    <!-- PAGE INTRO -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Calculator
+          </span>
+
+          <h1>
+            Percentage Calculator
+          </h1>
+
+          <p>
+            Calculate percentages quickly and accurately.
+            Enter your values below to get an instant result.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CALCULATOR -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="tool-panel">
+
+          <div class="tool-panel-header">
+
+            <span class="card-category">
+              Percentage
+            </span>
+
+            <h2>
+              Calculate a percentage
+            </h2>
+
+            <p>
+              Find what percentage of a number you need.
+            </p>
+
+          </div>
+
+
+          <!-- FORM -->
+
+          <form id="percentageForm">
+
+
+            <div class="form-grid">
+
+
+              <!-- PERCENTAGE -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="percentage"
+                >
+                  Percentage
+                </label>
+
+                <input
+                  class="input"
+                  id="percentage"
+                  type="number"
+                  inputmode="decimal"
+                  placeholder="e.g. 20"
+                  step="any"
+                  required
+                >
+
+                <span class="form-hint">
+                  Enter the percentage value.
+                </span>
+
+              </div>
+
+
+              <!-- NUMBER -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="number"
+                >
+                  Number
+                </label>
+
+                <input
+                  class="input"
+                  id="number"
+                  type="number"
+                  inputmode="decimal"
+                  placeholder="e.g. 500"
+                  step="any"
+                  required
+                >
+
+                <span class="form-hint">
+                  Enter the number you want to calculate.
+                </span>
+
+              </div>
+
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="tool-actions">
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-large"
+              >
+
+                Calculate
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              </button>
+
+
+              <button
+                type="button"
+                id="resetButton"
+                class="btn btn-secondary btn-large"
+              >
+                Reset
+              </button>
+
+            </div>
+
+
+          </form>
+
+
+          <div class="tool-divider"></div>
+
+
+          <!-- RESULT -->
+
+          <div
+            class="result-panel"
+            id="resultPanel"
+          >
+
+            <button
+              type="button"
+              class="icon-btn copy-button"
+              id="copyButton"
+              aria-label="Copy result"
+              title="Copy result"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="8"
+                  width="11"
+                  height="11"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+
+                <path
+                  d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                />
+              </svg>
+
+            </button>
+
+
+            <div class="result-label">
+              Result
+            </div>
+
+
+            <div
+              class="result-number"
+              id="resultNumber"
+            >
+              0
+            </div>
+
+
+            <div
+              class="result-description"
+              id="resultDescription"
+            >
+              Enter your values above and calculate your result.
+            </div>
+
+
+            <div
+              class="result-breakdown"
+              id="resultBreakdown"
+            >
+
+              <div class="result-row">
+
+                <span>
+                  Percentage
+                </span>
+
+                <span id="breakdownPercentage">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Number
+                </span>
+
+                <span id="breakdownNumber">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Calculation
+                </span>
+
+                <span id="breakdownCalculation">
+                  —
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- EXPLANATION -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="card card-hover">
+
+          <div class="card-body">
+
+            <span class="eyebrow">
+              How it works
+            </span>
+
+            <h2 style="margin-top: 12px;">
+              How to calculate a percentage
+            </h2>
+
+            <p style="margin-top: 14px;">
+              To calculate a percentage of a number, multiply
+              the percentage by the number and divide the result
+              by 100.
+            </p>
+
+
+            <div
+              class="result-panel"
+              style="margin-top: 24px;"
+            >
+
+              <div class="result-label">
+                Formula
+              </div>
+
+              <div
+                style="
+                  margin-top:10px;
+                  font-size:1.4rem;
+                  font-weight:700;
+                  letter-spacing:-0.03em;
+                "
+              >
+                Percentage × Number ÷ 100
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 17L17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+            </span>
+
+            Toolora
+
+          </a>
+
+
+          <p>
+            Beautifully engineered tools for everyday
+            calculations, productivity and learning.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Tools
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Productivity
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================
+       CALCULATOR JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    const form = document.getElementById("percentageForm");
+
+    const percentageInput =
+      document.getElementById("percentage");
+
+    const numberInput =
+      document.getElementById("number");
+
+    const resultNumber =
+      document.getElementById("resultNumber");
+
+    const resultDescription =
+      document.getElementById("resultDescription");
+
+    const breakdownPercentage =
+      document.getElementById("breakdownPercentage");
+
+    const breakdownNumber =
+      document.getElementById("breakdownNumber");
+
+    const breakdownCalculation =
+      document.getElementById("breakdownCalculation");
+
+    const resetButton =
+      document.getElementById("resetButton");
+
+    const copyButton =
+      document.getElementById("copyButton");
+
+
+    /*
+      FORMAT NUMBER
+    */
+
+    function formatNumber(value) {
+
+      return new Intl.NumberFormat(
+        "en-US",
+        {
+          maximumFractionDigits: 10
+        }
+      ).format(value);
+
+    }
+
+
+    /*
+      CALCULATE
+    */
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+
+      const percentage =
+        parseFloat(percentageInput.value);
+
+      const number =
+        parseFloat(numberInput.value);
+
+
+      if (
+        Number.isNaN(percentage) ||
+        Number.isNaN(number)
+      ) {
+
+        resultNumber.textContent = "—";
+
+        resultDescription.textContent =
+          "Please enter valid numbers.";
+
+        return;
+
+      }
+
+
+      const result =
+        (percentage * number) / 100;
+
+
+      resultNumber.textContent =
+        formatNumber(result);
+
+
+      resultDescription.textContent =
+        `${formatNumber(percentage)}% of ${formatNumber(number)} is ${formatNumber(result)}.`;
+
+
+      breakdownPercentage.textContent =
+        `${formatNumber(percentage)}%`;
+
+
+      breakdownNumber.textContent =
+        formatNumber(number);
+
+
+      breakdownCalculation.textContent =
+        `${formatNumber(percentage)} × ${formatNumber(number)} ÷ 100`;
+
+
+      /*
+        Small result animation
+      */
+
+      resultNumber.animate(
+        [
+          {
+            opacity: 0,
+            transform: "translateY(8px)"
+          },
+          {
+            opacity: 1,
+            transform: "translateY(0)"
+          }
+        ],
+        {
+          duration: 350,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+        }
+      );
+
+    });
+
+
+    /*
+      RESET
+    */
+
+    resetButton.addEventListener("click", function() {
+
+      form.reset();
+
+      resultNumber.textContent = "0";
+
+      resultDescription.textContent =
+        "Enter your values above and calculate your result.";
+
+      breakdownPercentage.textContent = "—";
+
+      breakdownNumber.textContent = "—";
+
+      breakdownCalculation.textContent = "—";
+
+    });
+
+
+    /*
+      COPY RESULT
+    */
+
+    copyButton.addEventListener("click", async function() {
+
+      const result =
+        resultNumber.textContent;
+
+
+      if (
+        result === "0" ||
+        result === "—"
+      ) {
+
+        return;
+
+      }
+
+
+      try {
+
+        await navigator.clipboard.writeText(result);
+
+        copyButton.setAttribute(
+          "title",
+          "Copied!"
+        );
+
+        setTimeout(function() {
+
+          copyButton.setAttribute(
+            "title",
+            "Copy result"
+          );
+
+        }, 1500);
+
+      } catch (error) {
+
+        console.log(
+          "Could not copy result."
+        );
+
+      }
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
