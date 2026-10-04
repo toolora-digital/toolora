@@ -1,0 +1,1170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Profit Margin Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate profit, profit margin, and markup instantly with Toolora's free profit margin calculator."
+  >
+
+  <link
+    rel="stylesheet"
+    href="../../assets/css/style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+
+      <a
+        href="../../index.html"
+        class="logo"
+      >
+
+        <span
+          class="logo-mark"
+          aria-hidden="true"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+
+            <path
+              d="M7 17L17 7M8 7h9v9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        Toolora
+
+      </a>
+
+
+
+      <div class="nav-links">
+
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+
+        <a
+          href="../index.html"
+          class="nav-link active"
+        >
+          Calculators
+        </a>
+
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link"
+        >
+          Tools
+        </a>
+
+
+        <a
+          href="../../student/index.html"
+          class="nav-link"
+        >
+          For Students
+        </a>
+
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+
+        <a
+          href="../../about/index.html"
+          class="nav-link"
+        >
+          About
+        </a>
+
+
+      </div>
+
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Calculators
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+
+    <!-- =====================================================
+         PAGE INTRO
+         ===================================================== -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Business & Finance
+          </span>
+
+
+          <h1>
+            Profit Margin Calculator
+          </h1>
+
+
+          <p>
+            Calculate your profit, profit margin, and markup
+            quickly and accurately.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALCULATOR
+         ===================================================== -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+
+        <div class="tool-panel">
+
+
+          <!-- TOOL HEADER -->
+
+          <div class="tool-panel-header">
+
+            <span class="card-category">
+              Profit Margin
+            </span>
+
+
+            <h2>
+              Calculate your profit margin
+            </h2>
+
+
+            <p>
+              Enter your selling price and cost price below.
+            </p>
+
+          </div>
+
+
+
+          <!-- =================================================
+               INPUTS
+               ================================================= -->
+
+          <div class="form-grid">
+
+
+            <!-- SELLING PRICE -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="sellingPrice"
+              >
+                Selling Price
+              </label>
+
+
+              <input
+                class="input"
+                type="number"
+                id="sellingPrice"
+                placeholder="e.g. 5000"
+                min="0"
+                step="0.01"
+              >
+
+
+              <span class="form-hint">
+                Enter the price you sell the product for.
+              </span>
+
+            </div>
+
+
+
+            <!-- COST PRICE -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="costPrice"
+              >
+                Cost Price
+              </label>
+
+
+              <input
+                class="input"
+                type="number"
+                id="costPrice"
+                placeholder="e.g. 3000"
+                min="0"
+                step="0.01"
+              >
+
+
+              <span class="form-hint">
+                Enter the amount the product costs you.
+              </span>
+
+            </div>
+
+
+          </div>
+
+
+
+          <!-- =================================================
+               ACTIONS
+               ================================================= -->
+
+          <div class="tool-actions">
+
+
+            <button
+              class="btn btn-primary btn-large"
+              type="button"
+              id="calculateBtn"
+            >
+
+              Calculate Profit
+
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M5 12H19M13 6L19 12L13 18"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </button>
+
+
+
+            <button
+              class="btn btn-secondary btn-large"
+              type="button"
+              id="resetBtn"
+            >
+              Reset
+            </button>
+
+
+          </div>
+
+
+
+          <!-- =================================================
+               DIVIDER
+               ================================================= -->
+
+          <div class="tool-divider"></div>
+
+
+
+          <!-- =================================================
+               RESULT
+               ================================================= -->
+
+          <div
+            class="result-panel"
+            id="resultPanel"
+          >
+
+
+            <div class="result-label">
+              Profit Margin
+            </div>
+
+
+            <div
+              class="result-number"
+              id="marginResult"
+            >
+              0%
+            </div>
+
+
+            <div
+              class="result-description"
+              id="resultDescription"
+            >
+              Enter your selling price and cost price to
+              calculate your result.
+            </div>
+
+
+
+            <!-- BREAKDOWN -->
+
+            <div class="result-breakdown">
+
+
+              <div class="result-row">
+
+                <span>
+                  Selling Price
+                </span>
+
+                <span id="sellingResult">
+                  0
+                </span>
+
+              </div>
+
+
+
+              <div class="result-row">
+
+                <span>
+                  Cost Price
+                </span>
+
+                <span id="costResult">
+                  0
+                </span>
+
+              </div>
+
+
+
+              <div class="result-row">
+
+                <span>
+                  Profit
+                </span>
+
+                <span id="profitResult">
+                  0
+                </span>
+
+              </div>
+
+
+
+              <div class="result-row">
+
+                <span>
+                  Markup
+                </span>
+
+                <span id="markupResult">
+                  0%
+                </span>
+
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+
+          <h2>
+            Understand your profit
+          </h2>
+
+
+          <p>
+            Toolora calculates your profit by subtracting
+            the cost price from the selling price. It then
+            calculates your profit margin based on the selling
+            price and also shows your markup based on the
+            cost price.
+          </p>
+
+        </div>
+
+
+        <!-- FORMULA CARD -->
+
+        <div
+          class="card card-hover"
+          style="margin-top:32px;"
+        >
+
+          <div class="card-body">
+
+
+            <span class="eyebrow">
+              Formulas
+            </span>
+
+
+            <h2 style="margin-top:12px;">
+              Profit, margin and markup
+            </h2>
+
+
+            <p style="margin-top:14px;">
+              These calculations help you understand how much
+              profit you make from each sale.
+            </p>
+
+
+
+            <div
+              class="result-panel"
+              style="margin-top:24px;"
+            >
+
+
+              <div class="result-label">
+                Profit
+              </div>
+
+
+              <div
+                style="
+                  margin-top:10px;
+                  font-size:1.25rem;
+                  font-weight:700;
+                  letter-spacing:-0.03em;
+                "
+              >
+                Selling Price − Cost Price
+              </div>
+
+
+            </div>
+
+
+
+            <div
+              class="result-panel"
+              style="margin-top:16px;"
+            >
+
+
+              <div class="result-label">
+                Profit Margin
+              </div>
+
+
+              <div
+                style="
+                  margin-top:10px;
+                  font-size:1.25rem;
+                  font-weight:700;
+                  letter-spacing:-0.03em;
+                "
+              >
+                Profit ÷ Selling Price × 100
+              </div>
+
+
+            </div>
+
+
+
+            <div
+              class="result-panel"
+              style="margin-top:16px;"
+            >
+
+
+              <div class="result-label">
+                Markup
+              </div>
+
+
+              <div
+                style="
+                  margin-top:10px;
+                  font-size:1.25rem;
+                  font-weight:700;
+                  letter-spacing:-0.03em;
+                "
+              >
+                Profit ÷ Cost Price × 100
+              </div>
+
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+
+      <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M7 17L17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+
+            Toolora
+
+          </a>
+
+
+          <p>
+            Beautifully engineered tools for everyday
+            calculations, productivity and learning.
+          </p>
+
+
+        </div>
+
+
+
+        <!-- PLATFORM -->
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+
+          <div class="footer-links">
+
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+
+            <a
+              href="../index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+
+            <a
+              href="../../student/index.html"
+              class="footer-link"
+            >
+              For Students
+            </a>
+
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- COMPANY -->
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+
+          <div class="footer-links">
+
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- LEGAL -->
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+
+          <div class="footer-links">
+
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="footer-bottom">
+
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+
+    const sellingPriceInput =
+      document.getElementById("sellingPrice");
+
+
+    const costPriceInput =
+      document.getElementById("costPrice");
+
+
+    const calculateBtn =
+      document.getElementById("calculateBtn");
+
+
+    const resetBtn =
+      document.getElementById("resetBtn");
+
+
+    const marginResult =
+      document.getElementById("marginResult");
+
+
+    const resultDescription =
+      document.getElementById("resultDescription");
+
+
+    const sellingResult =
+      document.getElementById("sellingResult");
+
+
+    const costResult =
+      document.getElementById("costResult");
+
+
+    const profitResult =
+      document.getElementById("profitResult");
+
+
+    const markupResult =
+      document.getElementById("markupResult");
+
+
+
+    /* =====================================================
+       FORMAT NUMBER
+       ===================================================== */
+
+    function formatNumber(value) {
+
+      return new Intl.NumberFormat(
+        "en-US",
+        {
+          maximumFractionDigits: 2
+        }
+      ).format(value);
+
+    }
+
+
+
+    /* =====================================================
+       CALCULATE
+       ===================================================== */
+
+    function calculateProfit() {
+
+
+      const sellingPrice =
+        parseFloat(sellingPriceInput.value);
+
+
+      const costPrice =
+        parseFloat(costPriceInput.value);
+
+
+
+      if (
+        Number.isNaN(sellingPrice) ||
+        Number.isNaN(costPrice)
+      ) {
+
+        marginResult.textContent =
+          "—";
+
+
+        resultDescription.textContent =
+          "Please enter both selling price and cost price.";
+
+
+        sellingResult.textContent =
+          "0";
+
+
+        costResult.textContent =
+          "0";
+
+
+        profitResult.textContent =
+          "0";
+
+
+        markupResult.textContent =
+          "0%";
+
+
+        return;
+
+      }
+
+
+
+      if (
+        sellingPrice <= 0 ||
+        costPrice < 0
+      ) {
+
+        marginResult.textContent =
+          "—";
+
+
+        resultDescription.textContent =
+          "Please enter valid positive values.";
+
+
+        return;
+
+      }
+
+
+
+      if (costPrice > sellingPrice) {
+
+        const loss =
+          costPrice - sellingPrice;
+
+
+        const margin =
+          ((sellingPrice - costPrice) /
+          sellingPrice) * 100;
+
+
+        const markup =
+          ((sellingPrice - costPrice) /
+          costPrice) * 100;
+
+
+        marginResult.textContent =
+          `${formatNumber(margin)}%`;
+
+
+        resultDescription.textContent =
+          `This sale results in a loss of ${formatNumber(loss)}.`;
+
+
+        sellingResult.textContent =
+          formatNumber(sellingPrice);
+
+
+        costResult.textContent =
+          formatNumber(costPrice);
+
+
+        profitResult.textContent =
+          `-${formatNumber(loss)}`;
+
+
+        markupResult.textContent =
+          `${formatNumber(markup)}%`;
+
+
+        return;
+
+      }
+
+
+
+      const profit =
+        sellingPrice - costPrice;
+
+
+      const margin =
+        (profit / sellingPrice) * 100;
+
+
+      const markup =
+        costPrice === 0
+          ? 0
+          : (profit / costPrice) * 100;
+
+
+
+      marginResult.textContent =
+        `${formatNumber(margin)}%`;
+
+
+      resultDescription.textContent =
+        `You make ${formatNumber(profit)} profit on a selling price of ${formatNumber(sellingPrice)}.`;
+
+
+      sellingResult.textContent =
+        formatNumber(sellingPrice);
+
+
+      costResult.textContent =
+        formatNumber(costPrice);
+
+
+      profitResult.textContent =
+        formatNumber(profit);
+
+
+      markupResult.textContent =
+        `${formatNumber(markup)}%`;
+
+
+
+      /* Result animation */
+
+      marginResult.animate(
+        [
+          {
+            opacity: 0,
+            transform: "translateY(8px)"
+          },
+          {
+            opacity: 1,
+            transform: "translateY(0)"
+          }
+        ],
+        {
+          duration: 350,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+        }
+      );
+
+    }
+
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    function resetCalculator() {
+
+
+      sellingPriceInput.value =
+        "";
+
+
+      costPriceInput.value =
+        "";
+
+
+      marginResult.textContent =
+        "0%";
+
+
+      resultDescription.textContent =
+        "Enter your selling price and cost price to calculate your result.";
+
+
+      sellingResult.textContent =
+        "0";
+
+
+      costResult.textContent =
+        "0";
+
+
+      profitResult.textContent =
+        "0";
+
+
+      markupResult.textContent =
+        "0%";
+
+    }
+
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    calculateBtn.addEventListener(
+      "click",
+      calculateProfit
+    );
+
+
+    resetBtn.addEventListener(
+      "click",
+      resetCalculator
+    );
+
+
+    sellingPriceInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateProfit();
+        }
+
+      }
+    );
+
+
+    costPriceInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateProfit();
+        }
+
+      }
+    );
+
+
+  </script>
+
+
+</body>
+
+</html>
