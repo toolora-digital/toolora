@@ -1,0 +1,1308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Random Number Generator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Generate random numbers between any minimum and maximum value with Toolora's free online random number generator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>
+          Toolora
+        </span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link active"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Numbers & Utilities
+          </span>
+
+          <h1>
+            Random Number
+            <span class="gradient-text">
+              Generator
+            </span>
+          </h1>
+
+          <p>
+            Generate random numbers between any minimum
+            and maximum value. Fast, flexible, and completely free.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Random Number Generator
+              </span>
+
+              <h2>
+                Generate random numbers
+              </h2>
+
+              <p>
+                Choose your range and generate one or more random numbers.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 RANGE INPUTS
+                 ================================================= -->
+
+            <div class="form-grid">
+
+              <!-- MINIMUM -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="minNumber"
+                >
+                  Minimum
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="minNumber"
+                  value="1"
+                  step="1"
+                >
+
+              </div>
+
+
+              <!-- MAXIMUM -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="maxNumber"
+                >
+                  Maximum
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="maxNumber"
+                  value="100"
+                  step="1"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 COUNT
+                 ================================================= -->
+
+            <div
+              class="form-group"
+              style="margin-top: 22px;"
+            >
+
+              <label
+                class="form-label"
+                for="numberCount"
+              >
+                How Many Numbers?
+              </label>
+
+              <input
+                class="input"
+                type="number"
+                id="numberCount"
+                value="1"
+                min="1"
+                max="100"
+                step="1"
+              >
+
+            </div>
+
+
+            <!-- =================================================
+                 OPTIONS
+                 ================================================= -->
+
+            <div
+              style="
+                display: grid;
+                gap: 14px;
+                margin-top: 24px;
+              "
+            >
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="uniqueNumbers"
+                  style="
+                    width: 18px;
+                    height: 18px;
+                  "
+                >
+
+                <span>
+                  Generate unique numbers only
+                </span>
+
+              </label>
+
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="evenOnly"
+                  style="
+                    width: 18px;
+                    height: 18px;
+                  "
+                >
+
+                <span>
+                  Even numbers only
+                </span>
+
+              </label>
+
+
+              <label
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 12px;
+                  cursor: pointer;
+                "
+              >
+
+                <input
+                  type="checkbox"
+                  id="oddOnly"
+                  style="
+                    width: 18px;
+                    height: 18px;
+                  "
+                >
+
+                <span>
+                  Odd numbers only
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="generateBtn"
+              >
+
+                Generate Numbers
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="clearBtn"
+              >
+                Clear
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="
+                margin-top: 28px;
+                text-align: center;
+              "
+            >
+
+              <div class="result-label">
+                Generated Numbers
+              </div>
+
+
+              <div
+                id="resultNumbers"
+                style="
+                  font-size: clamp(1.8rem, 5vw, 3rem);
+                  font-weight: 800;
+                  line-height: 1.35;
+                  word-break: break-word;
+                  margin-top: 12px;
+                "
+              >
+                —
+              </div>
+
+
+              <p
+                class="result-description"
+                id="resultStatus"
+              >
+                Choose your range and generate a number.
+              </p>
+
+
+              <div class="tool-actions">
+
+                <button
+                  class="btn btn-secondary"
+                  type="button"
+                  id="copyBtn"
+                >
+                  Copy Results
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUICK PRESETS
+                 ================================================= -->
+
+            <div
+              class="tool-panel-header"
+              style="margin-top: 40px;"
+            >
+
+              <span class="card-category">
+                Quick Presets
+              </span>
+
+              <h2>
+                Common ranges
+              </h2>
+
+              <p>
+                Quickly select a commonly used number range.
+              </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+              <button
+                type="button"
+                class="btn btn-secondary preset-btn"
+                data-min="1"
+                data-max="10"
+              >
+                1 — 10
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary preset-btn"
+                data-min="1"
+                data-max="100"
+              >
+                1 — 100
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary preset-btn"
+                data-min="1"
+                data-max="1000"
+              >
+                1 — 1,000
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary preset-btn"
+                data-min="0"
+                data-max="9"
+              >
+                0 — 9
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Generate random numbers instantly
+          </h2>
+
+          <p>
+            Enter a minimum and maximum value, choose how many
+            numbers you want, and click generate. You can also
+            generate unique, even, or odd numbers depending on
+            your requirements.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const minInput =
+      document.getElementById("minNumber");
+
+    const maxInput =
+      document.getElementById("maxNumber");
+
+    const countInput =
+      document.getElementById("numberCount");
+
+    const uniqueInput =
+      document.getElementById("uniqueNumbers");
+
+    const evenInput =
+      document.getElementById("evenOnly");
+
+    const oddInput =
+      document.getElementById("oddOnly");
+
+    const generateBtn =
+      document.getElementById("generateBtn");
+
+    const clearBtn =
+      document.getElementById("clearBtn");
+
+    const copyBtn =
+      document.getElementById("copyBtn");
+
+    const resultNumbers =
+      document.getElementById("resultNumbers");
+
+    const resultStatus =
+      document.getElementById("resultStatus");
+
+
+    /* =====================================================
+       RANDOM INTEGER
+       ===================================================== */
+
+    function randomInteger(min, max) {
+
+      /*
+       * Use Web Crypto where available.
+       * This provides better randomness than Math.random().
+       */
+
+      if (
+        window.crypto &&
+        window.crypto.getRandomValues
+      ) {
+
+        const range =
+          max - min + 1;
+
+        const maxUint =
+          4294967296;
+
+        const limit =
+          maxUint -
+          (
+            maxUint % range
+          );
+
+        const array =
+          new Uint32Array(1);
+
+        let randomValue;
+
+        do {
+
+          window.crypto.getRandomValues(
+            array
+          );
+
+          randomValue =
+            array[0];
+
+        } while (
+          randomValue >= limit
+        );
+
+
+        return (
+          min +
+          (
+            randomValue % range
+          )
+        );
+
+      }
+
+
+      return (
+        Math.floor(
+          Math.random() *
+          (
+            max - min + 1
+          )
+        ) +
+        min
+      );
+
+    }
+
+
+    /* =====================================================
+       GENERATE NUMBERS
+       ===================================================== */
+
+    function generateNumbers() {
+
+      let min =
+        Number(
+          minInput.value
+        );
+
+      let max =
+        Number(
+          maxInput.value
+        );
+
+      let count =
+        Number(
+          countInput.value
+        );
+
+
+      if (
+        !Number.isFinite(min) ||
+        !Number.isFinite(max)
+      ) {
+
+        resultNumbers.textContent =
+          "—";
+
+        resultStatus.textContent =
+          "Please enter valid minimum and maximum values.";
+
+        return;
+
+      }
+
+
+      min =
+        Math.ceil(min);
+
+      max =
+        Math.floor(max);
+
+
+      if (min > max) {
+
+        const temporary =
+          min;
+
+        min =
+          max;
+
+        max =
+          temporary;
+
+        minInput.value =
+          min;
+
+        maxInput.value =
+          max;
+
+      }
+
+
+      if (
+        !Number.isFinite(count) ||
+        count < 1
+      ) {
+
+        count = 1;
+
+      }
+
+
+      count =
+        Math.min(
+          100,
+          Math.floor(count)
+        );
+
+      countInput.value =
+        count;
+
+
+      /*
+       * Prevent contradictory filters.
+       */
+
+      if (
+        evenInput.checked &&
+        oddInput.checked
+      ) {
+
+        resultNumbers.textContent =
+          "Choose one";
+
+        resultStatus.textContent =
+          "Even and odd filters cannot be selected together.";
+
+        return;
+
+      }
+
+
+      /*
+       * Determine available numbers.
+       */
+
+      const availableNumbers =
+        [];
+
+
+      for (
+        let number = min;
+        number <= max;
+        number++
+      ) {
+
+        if (
+          evenInput.checked &&
+          number % 2 !== 0
+        ) {
+          continue;
+        }
+
+
+        if (
+          oddInput.checked &&
+          number % 2 === 0
+        ) {
+          continue;
+        }
+
+
+        availableNumbers.push(
+          number
+        );
+
+      }
+
+
+      if (
+        availableNumbers.length === 0
+      ) {
+
+        resultNumbers.textContent =
+          "No numbers";
+
+        resultStatus.textContent =
+          "No numbers in this range match your selected filter.";
+
+        return;
+
+      }
+
+
+      /*
+       * Unique numbers require enough
+       * available numbers.
+       */
+
+      if (
+        uniqueInput.checked &&
+        count > availableNumbers.length
+      ) {
+
+        resultNumbers.textContent =
+          "Not enough numbers";
+
+        resultStatus.textContent =
+          `Only ${availableNumbers.length} matching unique number${
+            availableNumbers.length === 1
+              ? ""
+              : "s"
+          } available in this range.`;
+
+        return;
+
+      }
+
+
+      const results =
+        [];
+
+
+      /*
+       * Generate unique numbers.
+       */
+
+      if (
+        uniqueInput.checked
+      ) {
+
+        const pool =
+          [...availableNumbers];
+
+
+        for (
+          let i = 0;
+          i < count;
+          i++
+        ) {
+
+          const randomIndex =
+            randomInteger(
+              0,
+              pool.length - 1
+            );
+
+
+          results.push(
+            pool[randomIndex]
+          );
+
+
+          pool.splice(
+            randomIndex,
+            1
+          );
+
+        }
+
+      } else {
+
+        /*
+         * Generate numbers where
+         * duplicates are allowed.
+         */
+
+        for (
+          let i = 0;
+          i < count;
+          i++
+        ) {
+
+          const randomIndex =
+            randomInteger(
+              0,
+              availableNumbers.length - 1
+            );
+
+
+          results.push(
+            availableNumbers[
+              randomIndex
+            ]
+          );
+
+        }
+
+      }
+
+
+      resultNumbers.textContent =
+        results
+          .map(
+            number =>
+              number.toLocaleString()
+          )
+          .join("  •  ");
+
+
+      resultStatus.textContent =
+        `${results.length} random ${
+          results.length === 1
+            ? "number"
+            : "numbers"
+        } generated between ${
+          min.toLocaleString()
+        } and ${
+          max.toLocaleString()
+        }.`;
+
+    }
+
+
+    /* =====================================================
+       CLEAR
+       ===================================================== */
+
+    function clearGenerator() {
+
+      minInput.value =
+        "1";
+
+      maxInput.value =
+        "100";
+
+      countInput.value =
+        "1";
+
+      uniqueInput.checked =
+        false;
+
+      evenInput.checked =
+        false;
+
+      oddInput.checked =
+        false;
+
+
+      resultNumbers.textContent =
+        "—";
+
+      resultStatus.textContent =
+        "Choose your range and generate a number.";
+
+    }
+
+
+    /* =====================================================
+       COPY RESULTS
+       ===================================================== */
+
+    async function copyResults() {
+
+      const text =
+        resultNumbers.textContent;
+
+
+      if (
+        !text ||
+        text === "—" ||
+        text === "Choose one" ||
+        text === "No numbers" ||
+        text === "Not enough numbers"
+      ) {
+
+        resultStatus.textContent =
+          "Generate numbers first.";
+
+        return;
+
+      }
+
+
+      try {
+
+        await navigator.clipboard.writeText(
+          text
+        );
+
+        resultStatus.textContent =
+          "Results copied to clipboard.";
+
+      } catch (error) {
+
+        const textArea =
+          document.createElement("textarea");
+
+        textArea.value =
+          text;
+
+        document.body.appendChild(
+          textArea
+        );
+
+        textArea.select();
+
+        document.execCommand(
+          "copy"
+        );
+
+        textArea.remove();
+
+        resultStatus.textContent =
+          "Results copied to clipboard.";
+
+      }
+
+    }
+
+
+    /* =====================================================
+       PRESET BUTTONS
+       ===================================================== */
+
+    const presetButtons =
+      document.querySelectorAll(
+        ".preset-btn"
+      );
+
+
+    presetButtons.forEach(
+      function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            minInput.value =
+              button.dataset.min;
+
+            maxInput.value =
+              button.dataset.max;
+
+            generateNumbers();
+
+          }
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       FILTER LOGIC
+       ===================================================== */
+
+    evenInput.addEventListener(
+      "change",
+      function() {
+
+        if (
+          evenInput.checked
+        ) {
+
+          oddInput.checked =
+            false;
+
+        }
+
+      }
+    );
+
+
+    oddInput.addEventListener(
+      "change",
+      function() {
+
+        if (
+          oddInput.checked
+        ) {
+
+          evenInput.checked =
+            false;
+
+        }
+
+      }
+    );
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    generateBtn.addEventListener(
+      "click",
+      generateNumbers
+    );
+
+
+    clearBtn.addEventListener(
+      "click",
+      clearGenerator
+    );
+
+
+    copyBtn.addEventListener(
+      "click",
+      copyResults
+    );
+
+
+    /* =====================================================
+       INITIAL RESULT
+       ===================================================== */
+
+    generateNumbers();
+
+  </script>
+
+</body>
+</html>
+```
