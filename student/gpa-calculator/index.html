@@ -1,0 +1,1328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GPA Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate your GPA quickly using grades and credit hours with Toolora's free online GPA calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>
+          Toolora
+        </span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link active"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../calculators/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Calculators
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Student & Education
+          </span>
+
+          <h1>
+            GPA
+            <span class="gradient-text">
+              Calculator
+            </span>
+          </h1>
+
+          <p>
+            Calculate your semester GPA using grades and
+            credit hours with a simple and accurate calculator.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                GPA Calculator
+              </span>
+
+              <h2>
+                Enter your subjects
+              </h2>
+
+              <p>
+                Select a grade and enter the credit hours
+                for each subject.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 SCALE
+                 ================================================= -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="scale"
+              >
+                GPA Scale
+              </label>
+
+              <select
+                class="input"
+                id="scale"
+              >
+
+                <option value="4">
+                  4.0 Scale
+                </option>
+
+                <option value="5">
+                  5.0 Scale
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- =================================================
+                 SUBJECTS
+                 ================================================= -->
+
+            <div
+              id="subjectsContainer"
+              style="margin-top: 24px;"
+            ></div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="calculateBtn"
+              >
+
+                Calculate GPA
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="addSubjectBtn"
+              >
+                + Add Subject
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="resetBtn"
+              >
+                Reset
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="margin-top: 28px;"
+            >
+
+              <div class="result-label">
+                Your GPA
+              </div>
+
+
+              <div
+                class="result-number"
+                id="gpaResult"
+              >
+                3.20
+              </div>
+
+
+              <p
+                class="result-description"
+                id="gpaStatus"
+              >
+                Based on your entered subjects.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    Total Subjects
+                  </span>
+
+                  <span id="totalSubjects">
+                    4
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Total Credit Hours
+                  </span>
+
+                  <span id="totalCredits">
+                    12
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Total Grade Points
+                  </span>
+
+                  <span id="totalPoints">
+                    38.40
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    GPA Scale
+                  </span>
+
+                  <span id="resultScale">
+                    4.0
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Calculate your GPA in seconds
+          </h2>
+
+          <p>
+            Enter each subject's grade and credit hours.
+            The calculator uses weighted grade points based
+            on credit hours to calculate your overall GPA.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const subjectsContainer =
+      document.getElementById(
+        "subjectsContainer"
+      );
+
+
+    const scaleInput =
+      document.getElementById(
+        "scale"
+      );
+
+
+    const calculateBtn =
+      document.getElementById(
+        "calculateBtn"
+      );
+
+
+    const addSubjectBtn =
+      document.getElementById(
+        "addSubjectBtn"
+      );
+
+
+    const resetBtn =
+      document.getElementById(
+        "resetBtn"
+      );
+
+
+    const gpaResult =
+      document.getElementById(
+        "gpaResult"
+      );
+
+
+    const gpaStatus =
+      document.getElementById(
+        "gpaStatus"
+      );
+
+
+    const totalSubjects =
+      document.getElementById(
+        "totalSubjects"
+      );
+
+
+    const totalCredits =
+      document.getElementById(
+        "totalCredits"
+      );
+
+
+    const totalPoints =
+      document.getElementById(
+        "totalPoints"
+      );
+
+
+    const resultScale =
+      document.getElementById(
+        "resultScale"
+      );
+
+
+    /* =====================================================
+       GRADE VALUES
+       ===================================================== */
+
+    const gradePoints4 =
+      {
+
+        "A+": 4.00,
+        "A": 4.00,
+        "A-": 3.70,
+
+        "B+": 3.30,
+        "B": 3.00,
+        "B-": 2.70,
+
+        "C+": 2.30,
+        "C": 2.00,
+        "C-": 1.70,
+
+        "D+": 1.30,
+        "D": 1.00,
+        "F": 0.00
+
+      };
+
+
+    const gradePoints5 =
+      {
+
+        "A+": 5.00,
+        "A": 5.00,
+        "A-": 4.70,
+
+        "B+": 4.30,
+        "B": 4.00,
+        "B-": 3.70,
+
+        "C+": 3.30,
+        "C": 3.00,
+        "C-": 2.70,
+
+        "D+": 2.30,
+        "D": 2.00,
+        "F": 0.00
+
+      };
+
+
+    /* =====================================================
+       ADD SUBJECT
+       ===================================================== */
+
+    function addSubject(
+      name = "",
+      grade = "A",
+      credits = 3
+    ) {
+
+      const row =
+        document.createElement(
+          "div"
+        );
+
+
+      row.className =
+        "subject-row";
+
+
+      row.innerHTML = `
+
+        <div class="subject-number">
+          Subject
+        </div>
+
+        <div class="form-group">
+
+          <label class="form-label">
+            Subject Name
+          </label>
+
+          <input
+            class="input subject-name"
+            type="text"
+            placeholder="e.g. Mathematics"
+            value="${name}"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label class="form-label">
+            Grade
+          </label>
+
+          <select class="input subject-grade">
+
+            <option value="A+">A+</option>
+            <option value="A">A</option>
+            <option value="A-">A-</option>
+
+            <option value="B+">B+</option>
+            <option value="B">B</option>
+            <option value="B-">B-</option>
+
+            <option value="C+">C+</option>
+            <option value="C">C</option>
+            <option value="C-">C-</option>
+
+            <option value="D+">D+</option>
+            <option value="D">D</option>
+
+            <option value="F">F</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label class="form-label">
+            Credit Hours
+          </label>
+
+          <input
+            class="input subject-credit"
+            type="number"
+            min="0.5"
+            step="0.5"
+            value="${credits}"
+          >
+
+        </div>
+
+
+        <button
+          type="button"
+          class="remove-subject"
+          aria-label="Remove subject"
+        >
+          Remove
+        </button>
+
+      `;
+
+
+      const gradeSelect =
+        row.querySelector(
+          ".subject-grade"
+        );
+
+
+      gradeSelect.value =
+        grade;
+
+
+      row.querySelector(
+        ".remove-subject"
+      ).addEventListener(
+        "click",
+        function() {
+
+          /*
+           * Keep at least one subject row.
+           */
+
+          if (
+            subjectsContainer.children.length >
+            1
+          ) {
+
+            row.remove();
+
+            updateSubjectLabels();
+
+            calculateGPA();
+
+          }
+
+        }
+      );
+
+
+      /*
+       * Live calculation.
+       */
+
+      row.querySelector(
+        ".subject-grade"
+      ).addEventListener(
+        "change",
+        calculateGPA
+      );
+
+
+      row.querySelector(
+        ".subject-credit"
+      ).addEventListener(
+        "input",
+        calculateGPA
+      );
+
+
+      subjectsContainer.appendChild(
+        row
+      );
+
+
+      updateSubjectLabels();
+
+    }
+
+
+    /* =====================================================
+       SUBJECT LABELS
+       ===================================================== */
+
+    function updateSubjectLabels() {
+
+      const rows =
+        subjectsContainer.querySelectorAll(
+          ".subject-row"
+        );
+
+
+      rows.forEach(
+        function(row, index) {
+
+          const label =
+            row.querySelector(
+              ".subject-number"
+            );
+
+
+          label.textContent =
+            `Subject ${index + 1}`;
+
+        }
+      );
+
+    }
+
+
+    /* =====================================================
+       CALCULATE GPA
+       ===================================================== */
+
+    function calculateGPA() {
+
+      const rows =
+        subjectsContainer.querySelectorAll(
+          ".subject-row"
+        );
+
+
+      const scale =
+        parseFloat(
+          scaleInput.value
+        );
+
+
+      const gradeMap =
+        scale === 5
+          ? gradePoints5
+          : gradePoints4;
+
+
+      let totalCreditHours =
+        0;
+
+
+      let weightedPoints =
+        0;
+
+
+      let validSubjects =
+        0;
+
+
+      rows.forEach(
+        function(row) {
+
+          const grade =
+            row.querySelector(
+              ".subject-grade"
+            ).value;
+
+
+          const credit =
+            parseFloat(
+              row.querySelector(
+                ".subject-credit"
+              ).value
+            ) || 0;
+
+
+          if (
+            credit > 0
+          ) {
+
+            const points =
+              gradeMap[grade] ?? 0;
+
+
+            totalCreditHours +=
+              credit;
+
+
+            weightedPoints +=
+              points *
+              credit;
+
+
+            validSubjects++;
+
+          }
+
+        }
+      );
+
+
+      if (
+        totalCreditHours <= 0
+      ) {
+
+        gpaResult.textContent =
+          "0.00";
+
+
+        gpaStatus.textContent =
+          "Enter valid credit hours to calculate your GPA.";
+
+
+        totalSubjects.textContent =
+          "0";
+
+
+        totalCredits.textContent =
+          "0";
+
+
+        totalPoints.textContent =
+          "0.00";
+
+
+        resultScale.textContent =
+          scale.toFixed(1);
+
+        return;
+
+      }
+
+
+      const gpa =
+        weightedPoints /
+        totalCreditHours;
+
+
+      /* =================================================
+         RESULTS
+         ================================================= */
+
+      gpaResult.textContent =
+        gpa.toFixed(2);
+
+
+      totalSubjects.textContent =
+        validSubjects;
+
+
+      totalCredits.textContent =
+        formatNumber(
+          totalCreditHours
+        );
+
+
+      totalPoints.textContent =
+        weightedPoints.toFixed(2);
+
+
+      resultScale.textContent =
+        scale.toFixed(1);
+
+
+      gpaStatus.textContent =
+        `Calculated from ${validSubjects} subject${validSubjects === 1 ? "" : "s"} and ${formatNumber(totalCreditHours)} credit hours.`;
+
+    }
+
+
+    /* =====================================================
+       FORMAT NUMBER
+       ===================================================== */
+
+    function formatNumber(
+      number
+    ) {
+
+      return Number.isInteger(
+        number
+      )
+        ? String(number)
+        : number.toFixed(1);
+
+    }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    function resetCalculator() {
+
+      subjectsContainer.innerHTML =
+        "";
+
+
+      scaleInput.value =
+        "4";
+
+
+      addSubject(
+        "Mathematics",
+        "A",
+        3
+      );
+
+
+      addSubject(
+        "English",
+        "B+",
+        3
+      );
+
+
+      addSubject(
+        "Computer Science",
+        "A-",
+        3
+      );
+
+
+      addSubject(
+        "Physics",
+        "B",
+        3
+      );
+
+
+      calculateGPA();
+
+    }
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    calculateBtn.addEventListener(
+      "click",
+      calculateGPA
+    );
+
+
+    addSubjectBtn.addEventListener(
+      "click",
+      function() {
+
+        addSubject();
+
+        calculateGPA();
+
+      }
+    );
+
+
+    resetBtn.addEventListener(
+      "click",
+      resetCalculator
+    );
+
+
+    scaleInput.addEventListener(
+      "change",
+      calculateGPA
+    );
+
+
+    /* =====================================================
+       INITIAL SUBJECTS
+       ===================================================== */
+
+    addSubject(
+      "Mathematics",
+      "A",
+      3
+    );
+
+
+    addSubject(
+      "English",
+      "B+",
+      3
+    );
+
+
+    addSubject(
+      "Computer Science",
+      "A-",
+      3
+    );
+
+
+    addSubject(
+      "Physics",
+      "B",
+      3
+    );
+
+
+    calculateGPA();
+
+  </script>
+
+
+  <!-- =====================================================
+       COMPONENT STYLING
+       ===================================================== -->
+
+  <style>
+
+    .subject-row {
+
+      display: grid;
+
+      grid-template-columns:
+        90px
+        minmax(150px, 1.5fr)
+        minmax(110px, 0.8fr)
+        minmax(110px, 0.8fr)
+        auto;
+
+      align-items: end;
+
+      gap: 12px;
+
+      padding: 16px;
+
+      margin-bottom: 12px;
+
+      border: 1px solid
+        rgba(0, 0, 0, 0.07);
+
+      border-radius: 14px;
+
+      background:
+        rgba(255, 255, 255, 0.55);
+
+    }
+
+
+    .subject-number {
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      padding-bottom: 15px;
+
+      opacity: 0.65;
+
+    }
+
+
+    .remove-subject {
+
+      border: 0;
+
+      background: transparent;
+
+      font-family: inherit;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      cursor: pointer;
+
+      padding: 12px 4px;
+
+      opacity: 0.6;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+    }
+
+
+    .remove-subject:hover {
+
+      opacity: 1;
+
+      transform:
+        translateY(-1px);
+
+    }
+
+
+    @media (
+      max-width: 800px
+    ) {
+
+      .subject-row {
+
+        grid-template-columns:
+          1fr 1fr;
+
+      }
+
+
+      .subject-number {
+
+        grid-column:
+          1 / -1;
+
+        padding-bottom: 0;
+
+      }
+
+
+      .remove-subject {
+
+        grid-column:
+          1 / -1;
+
+        justify-self: start;
+
+      }
+
+    }
+
+
+    @media (
+      max-width: 500px
+    ) {
+
+      .subject-row {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .subject-number {
+
+        grid-column:
+          auto;
+
+      }
+
+
+      .remove-subject {
+
+        grid-column:
+          auto;
+
+      }
+
+    }
+
+  </style>
+
+</body>
+</html>
+```
