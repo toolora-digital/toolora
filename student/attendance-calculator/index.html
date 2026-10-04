@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Attendance Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate your attendance percentage, missed classes, and required future classes with Toolora's free attendance calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../calculators/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Calculators
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Student & Education
+          </span>
+
+          <h1>
+            Attendance
+            <span class="gradient-text">
+              Calculator
+            </span>
+          </h1>
+
+          <p>
+            Calculate your attendance percentage, missed classes,
+            and how many classes you need to attend to reach your target.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Attendance Calculator
+              </span>
+
+              <h2>
+                Calculate your attendance
+              </h2>
+
+              <p>
+                Enter your class attendance details below.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 INPUTS
+                 ================================================= -->
+
+            <div class="form-grid">
+
+              <!-- TOTAL CLASSES -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="totalClasses"
+                >
+                  Total Classes
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="totalClasses"
+                  placeholder="e.g. 50"
+                  min="1"
+                  step="1"
+                  value="50"
+                >
+
+              </div>
+
+
+              <!-- ATTENDED -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="attendedClasses"
+                >
+                  Classes Attended
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="attendedClasses"
+                  placeholder="e.g. 40"
+                  min="0"
+                  step="1"
+                  value="40"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- TARGET -->
+
+            <div
+              class="form-group"
+              style="margin-top: 22px;"
+            >
+
+              <label
+                class="form-label"
+                for="targetAttendance"
+              >
+                Target Attendance %
+              </label>
+
+              <input
+                class="input"
+                type="number"
+                id="targetAttendance"
+                placeholder="e.g. 75"
+                min="1"
+                max="100"
+                step="0.1"
+                value="75"
+              >
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="calculateBtn"
+              >
+
+                Calculate Attendance
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="resetBtn"
+              >
+                Reset
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="margin-top: 28px;"
+            >
+
+              <div class="result-label">
+                Current Attendance
+              </div>
+
+
+              <div
+                class="result-number"
+                id="attendancePercentage"
+              >
+                80.00%
+              </div>
+
+
+              <p
+                class="result-description"
+                id="attendanceStatus"
+              >
+                You are currently above your target.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <!-- TOTAL -->
+
+                <div class="result-row">
+
+                  <span>
+                    Total Classes
+                  </span>
+
+                  <span id="resultTotal">
+                    50
+                  </span>
+
+                </div>
+
+
+                <!-- ATTENDED -->
+
+                <div class="result-row">
+
+                  <span>
+                    Classes Attended
+                  </span>
+
+                  <span id="resultAttended">
+                    40
+                  </span>
+
+                </div>
+
+
+                <!-- MISSED -->
+
+                <div class="result-row">
+
+                  <span>
+                    Classes Missed
+                  </span>
+
+                  <span id="resultMissed">
+                    10
+                  </span>
+
+                </div>
+
+
+                <!-- TARGET -->
+
+                <div class="result-row">
+
+                  <span>
+                    Target Attendance
+                  </span>
+
+                  <span id="resultTarget">
+                    75%
+                  </span>
+
+                </div>
+
+
+                <!-- REQUIRED -->
+
+                <div class="result-row">
+
+                  <span>
+                    Classes Needed
+                  </span>
+
+                  <span id="classesNeeded">
+                    0
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FUTURE ATTENDANCE
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="margin-top: 18px;"
+            >
+
+              <div class="result-label">
+                Attendance Planning
+              </div>
+
+
+              <p
+                class="result-description"
+                id="planningMessage"
+              >
+                Your attendance is already at or above your target.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    You Can Miss
+                  </span>
+
+                  <span id="canMiss">
+                    3
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Attendance After 5 Classes
+                  </span>
+
+                  <span id="afterFive">
+                    83.64%
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Know where your attendance stands
+          </h2>
+
+          <p>
+            Enter the number of classes held and attended.
+            Toolora calculates your current percentage and
+            shows how future attendance can affect your result.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const totalClassesInput =
+      document.getElementById(
+        "totalClasses"
+      );
+
+
+    const attendedClassesInput =
+      document.getElementById(
+        "attendedClasses"
+      );
+
+
+    const targetAttendanceInput =
+      document.getElementById(
+        "targetAttendance"
+      );
+
+
+    const calculateBtn =
+      document.getElementById(
+        "calculateBtn"
+      );
+
+
+    const resetBtn =
+      document.getElementById(
+        "resetBtn"
+      );
+
+
+    const attendancePercentage =
+      document.getElementById(
+        "attendancePercentage"
+      );
+
+
+    const attendanceStatus =
+      document.getElementById(
+        "attendanceStatus"
+      );
+
+
+    const resultTotal =
+      document.getElementById(
+        "resultTotal"
+      );
+
+
+    const resultAttended =
+      document.getElementById(
+        "resultAttended"
+      );
+
+
+    const resultMissed =
+      document.getElementById(
+        "resultMissed"
+      );
+
+
+    const resultTarget =
+      document.getElementById(
+        "resultTarget"
+      );
+
+
+    const classesNeeded =
+      document.getElementById(
+        "classesNeeded"
+      );
+
+
+    const planningMessage =
+      document.getElementById(
+        "planningMessage"
+      );
+
+
+    const canMiss =
+      document.getElementById(
+        "canMiss"
+      );
+
+
+    const afterFive =
+      document.getElementById(
+        "afterFive"
+      );
+
+
+    /* =====================================================
+       CALCULATE
+       ===================================================== */
+
+    function calculateAttendance() {
+
+      let total =
+        parseInt(
+          totalClassesInput.value
+        ) || 0;
+
+
+      let attended =
+        parseInt(
+          attendedClassesInput.value
+        ) || 0;
+
+
+      let target =
+        parseFloat(
+          targetAttendanceInput.value
+        ) || 0;
+
+
+      /* ---------------------------------------------
+         VALIDATION
+         --------------------------------------------- */
+
+      if (
+        total <= 0
+      ) {
+
+        showError(
+          "Please enter a total number of classes."
+        );
+
+        return;
+
+      }
+
+
+      if (
+        attended < 0
+      ) {
+
+        attended = 0;
+
+      }
+
+
+      if (
+        attended > total
+      ) {
+
+        attended = total;
+
+        attendedClassesInput.value =
+          total;
+
+      }
+
+
+      if (
+        target < 0
+      ) {
+
+        target = 0;
+
+      }
+
+
+      if (
+        target > 100
+      ) {
+
+        target = 100;
+
+        targetAttendanceInput.value =
+          100;
+
+      }
+
+
+      /* ---------------------------------------------
+         CURRENT ATTENDANCE
+         --------------------------------------------- */
+
+      const missed =
+        total - attended;
+
+
+      const percentage =
+        (
+          attended /
+          total
+        ) * 100;
+
+
+      /* ---------------------------------------------
+         CLASSES NEEDED TO REACH TARGET
+         --------------------------------------------- */
+
+      let needed = 0;
+
+
+      if (
+        percentage <
+        target
+      ) {
+
+        /*
+         * We need x future classes:
+         *
+         * (attended + x)
+         * ---------------- >= target
+         * (total + x)
+         *
+         * x >=
+         * (target * total - 100 * attended)
+         * ----------------------------------
+         * (100 - target)
+         */
+
+        if (
+          target >= 100
+        ) {
+
+          needed =
+            total - attended;
+
+        } else {
+
+          needed =
+            Math.ceil(
+              (
+                target * total -
+                100 * attended
+              ) /
+              (
+                100 - target
+              )
+            );
+
+        }
+
+      }
+
+
+      /* ---------------------------------------------
+         HOW MANY CLASSES CAN BE MISSED
+         --------------------------------------------- */
+
+      let missable =
+        0;
+
+
+      /*
+       * If current attendance is already
+       * above target, calculate how many
+       * additional classes can be missed
+       * while staying at the target.
+       */
+
+      if (
+        percentage >= target &&
+        target < 100
+      ) {
+
+        missable =
+          Math.floor(
+            (
+              attended * 100 -
+              target * total
+            ) /
+            target
+          );
+
+      }
+
+
+      /* ---------------------------------------------
+         ATTENDANCE AFTER 5 FUTURE CLASSES
+         --------------------------------------------- */
+
+      const futureClasses =
+        5;
+
+
+      const afterFivePercentage =
+        (
+          (
+            attended +
+            futureClasses
+          ) /
+          (
+            total +
+            futureClasses
+          )
+        ) * 100;
+
+
+      /* ---------------------------------------------
+         UPDATE RESULTS
+         --------------------------------------------- */
+
+      attendancePercentage.textContent =
+        percentage.toFixed(2) +
+        "%";
+
+
+      resultTotal.textContent =
+        total;
+
+
+      resultAttended.textContent =
+        attended;
+
+
+      resultMissed.textContent =
+        missed;
+
+
+      resultTarget.textContent =
+        target.toFixed(
+          target % 1 === 0
+            ? 0
+            : 1
+        ) +
+        "%";
+
+
+      classesNeeded.textContent =
+        needed;
+
+
+      canMiss.textContent =
+        missable;
+
+
+      afterFive.textContent =
+        afterFivePercentage.toFixed(
+          2
+        ) +
+        "%";
+
+
+      /* ---------------------------------------------
+         STATUS
+         --------------------------------------------- */
+
+      if (
+        percentage >= target
+      ) {
+
+        attendanceStatus.textContent =
+          "Your current attendance is at or above your target.";
+
+
+        planningMessage.textContent =
+          "You are currently meeting your target attendance.";
+
+      } else {
+
+        attendanceStatus.textContent =
+          "Your current attendance is below your target.";
+
+
+        planningMessage.textContent =
+          `You need to attend ${needed} consecutive future class${needed === 1 ? "" : "es"} to reach your target.`;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       ERROR
+       ===================================================== */
+
+    function showError(
+      message
+    ) {
+
+      attendancePercentage.textContent =
+        "--";
+
+
+      attendanceStatus.textContent =
+        message;
+
+
+      classesNeeded.textContent =
+        "--";
+
+
+      canMiss.textContent =
+        "--";
+
+
+      afterFive.textContent =
+        "--";
+
+    }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    function resetCalculator() {
+
+      totalClassesInput.value =
+        "50";
+
+
+      attendedClassesInput.value =
+        "40";
+
+
+      targetAttendanceInput.value =
+        "75";
+
+
+      calculateAttendance();
+
+    }
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    calculateBtn.addEventListener(
+      "click",
+      calculateAttendance
+    );
+
+
+    resetBtn.addEventListener(
+      "click",
+      resetCalculator
+    );
+
+
+    /*
+     * Live calculation when inputs change.
+     */
+
+    totalClassesInput.addEventListener(
+      "input",
+      calculateAttendance
+    );
+
+
+    attendedClassesInput.addEventListener(
+      "input",
+      calculateAttendance
+    );
+
+
+    targetAttendanceInput.addEventListener(
+      "input",
+      calculateAttendance
+    );
+
+
+    /* =====================================================
+       INITIAL CALCULATION
+       ===================================================== */
+
+    calculateAttendance();
+
+  </script>
+
+
+  <!-- =====================================================
+       COMPONENT STYLING
+       ===================================================== -->
+
+  <style>
+
+    /*
+     * Keeps number inputs visually consistent
+     * with the Toolora design system.
+     */
+
+    .form-group .input {
+
+      width: 100%;
+
+    }
+
+
+    /*
+     * Better mobile spacing.
+     */
+
+    @media (
+      max-width: 700px
+    ) {
+
+      .tool-actions {
+
+        flex-wrap: wrap;
+
+      }
+
+    }
+
+  </style>
+
+</body>
+</html>
+```
