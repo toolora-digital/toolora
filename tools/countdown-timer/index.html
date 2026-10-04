@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Countdown Timer — Toolora</title>
+
+  <meta
+    name="description"
+    content="Create a simple countdown timer with hours, minutes, and seconds using Toolora's free online countdown timer."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link active"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Time & Productivity
+          </span>
+
+          <h1>
+            Countdown
+            <span class="gradient-text">
+              Timer
+            </span>
+          </h1>
+
+          <p>
+            Set a timer for hours, minutes, and seconds.
+            Simple, accurate, and completely free.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Countdown Timer
+              </span>
+
+              <h2>
+                Set your countdown
+              </h2>
+
+              <p>
+                Choose how long you want the timer to run.
+              </p>
+
+            </div>
+
+
+            <!-- INPUTS -->
+
+            <div class="form-grid">
+
+              <!-- HOURS -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="hours"
+                >
+                  Hours
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="hours"
+                  placeholder="0"
+                  min="0"
+                  max="99"
+                  step="1"
+                  value="0"
+                >
+
+              </div>
+
+
+              <!-- MINUTES -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="minutes"
+                >
+                  Minutes
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="minutes"
+                  placeholder="0"
+                  min="0"
+                  max="59"
+                  step="1"
+                  value="0"
+                >
+
+              </div>
+
+
+              <!-- SECONDS -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="seconds"
+                >
+                  Seconds
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="seconds"
+                  placeholder="0"
+                  min="0"
+                  max="59"
+                  step="1"
+                  value="30"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="startBtn"
+              >
+
+                Start Timer
+
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 5L19 12L8 19V5Z"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="pauseBtn"
+              >
+                Pause
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="resetBtn"
+              >
+                Reset
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="margin-top: 28px;"
+            >
+
+              <div class="result-label">
+                Time Remaining
+              </div>
+
+
+              <div
+                class="result-number"
+                id="timerDisplay"
+              >
+                00:00:30
+              </div>
+
+
+              <p
+                class="result-description"
+                id="timerStatus"
+              >
+                Ready to start.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    Hours
+                  </span>
+
+                  <span id="displayHours">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Minutes
+                  </span>
+
+                  <span id="displayMinutes">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Seconds
+                  </span>
+
+                  <span id="displaySeconds">
+                    30
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Track time with a simple countdown
+          </h2>
+
+          <p>
+            Enter your desired hours, minutes, and seconds,
+            then start the timer. You can pause or reset the
+            countdown at any time.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    const hoursInput =
+      document.getElementById("hours");
+
+    const minutesInput =
+      document.getElementById("minutes");
+
+    const secondsInput =
+      document.getElementById("seconds");
+
+
+    const startBtn =
+      document.getElementById("startBtn");
+
+    const pauseBtn =
+      document.getElementById("pauseBtn");
+
+    const resetBtn =
+      document.getElementById("resetBtn");
+
+
+    const timerDisplay =
+      document.getElementById("timerDisplay");
+
+    const timerStatus =
+      document.getElementById("timerStatus");
+
+
+    const displayHours =
+      document.getElementById("displayHours");
+
+    const displayMinutes =
+      document.getElementById("displayMinutes");
+
+    const displaySeconds =
+      document.getElementById("displaySeconds");
+
+
+    let totalSeconds = 30;
+
+    let remainingSeconds = 30;
+
+    let timer = null;
+
+    let isRunning = false;
+
+
+    function formatTime(value) {
+
+      return String(value).padStart(2, "0");
+
+    }
+
+
+    function updateDisplay() {
+
+      const hours =
+        Math.floor(
+          remainingSeconds / 3600
+        );
+
+      const minutes =
+        Math.floor(
+          (remainingSeconds % 3600) / 60
+        );
+
+      const seconds =
+        remainingSeconds % 60;
+
+
+      timerDisplay.textContent =
+        `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+
+
+      displayHours.textContent =
+        hours;
+
+      displayMinutes.textContent =
+        minutes;
+
+      displaySeconds.textContent =
+        seconds;
+
+    }
+
+
+    function getInputTime() {
+
+      let hours =
+        parseInt(hoursInput.value) || 0;
+
+      let minutes =
+        parseInt(minutesInput.value) || 0;
+
+      let seconds =
+        parseInt(secondsInput.value) || 0;
+
+
+      hours =
+        Math.max(0, Math.min(99, hours));
+
+      minutes =
+        Math.max(0, Math.min(59, minutes));
+
+      seconds =
+        Math.max(0, Math.min(59, seconds));
+
+
+      hoursInput.value =
+        hours;
+
+      minutesInput.value =
+        minutes;
+
+      secondsInput.value =
+        seconds;
+
+
+      return (
+        hours * 3600 +
+        minutes * 60 +
+        seconds
+      );
+
+    }
+
+
+    function startTimer() {
+
+      if (isRunning) {
+        return;
+      }
+
+
+      if (remainingSeconds <= 0) {
+
+        remainingSeconds =
+          getInputTime();
+
+      }
+
+
+      if (remainingSeconds <= 0) {
+
+        timerStatus.textContent =
+          "Please set a time greater than zero.";
+
+        return;
+
+      }
+
+
+      isRunning = true;
+
+      timerStatus.textContent =
+        "Timer is running...";
+
+
+      timer =
+        setInterval(
+          function() {
+
+            remainingSeconds--;
+
+            updateDisplay();
+
+
+            if (remainingSeconds <= 0) {
+
+              clearInterval(timer);
+
+              timer = null;
+
+              isRunning = false;
+
+              remainingSeconds = 0;
+
+              updateDisplay();
+
+              timerStatus.textContent =
+                "Time's up!";
+
+            }
+
+          },
+          1000
+        );
+
+    }
+
+
+    function pauseTimer() {
+
+      if (!isRunning) {
+        return;
+      }
+
+
+      clearInterval(timer);
+
+      timer = null;
+
+      isRunning = false;
+
+
+      timerStatus.textContent =
+        "Timer paused.";
+
+    }
+
+
+    function resetTimer() {
+
+      clearInterval(timer);
+
+      timer = null;
+
+      isRunning = false;
+
+
+      remainingSeconds =
+        getInputTime();
+
+      totalSeconds =
+        remainingSeconds;
+
+
+      updateDisplay();
+
+
+      timerStatus.textContent =
+        "Ready to start.";
+
+    }
+
+
+    function updateFromInputs() {
+
+      if (isRunning) {
+        return;
+      }
+
+
+      remainingSeconds =
+        getInputTime();
+
+      totalSeconds =
+        remainingSeconds;
+
+      updateDisplay();
+
+      timerStatus.textContent =
+        "Ready to start.";
+
+    }
+
+
+    startBtn.addEventListener(
+      "click",
+      startTimer
+    );
+
+
+    pauseBtn.addEventListener(
+      "click",
+      pauseTimer
+    );
+
+
+    resetBtn.addEventListener(
+      "click",
+      resetTimer
+    );
+
+
+    hoursInput.addEventListener(
+      "input",
+      updateFromInputs
+    );
+
+
+    minutesInput.addEventListener(
+      "input",
+      updateFromInputs
+    );
+
+
+    secondsInput.addEventListener(
+      "input",
+      updateFromInputs
+    );
+
+
+    updateDisplay();
+
+  </script>
+
+</body>
+</html>
