@@ -1,0 +1,1625 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Unit Converter — Toolora</title>
+
+  <meta
+    name="description"
+    content="Convert length, weight, temperature, area, volume, speed, time, and data units with Toolora's free online unit converter."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="../../index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="../../calculators/index.html" class="nav-link">
+          Calculators
+        </a>
+
+        <a href="../../tools/index.html" class="nav-link active">
+          Tools
+        </a>
+
+        <a href="../../games/index.html" class="nav-link">
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Conversion & Utilities
+          </span>
+
+          <h1>
+            Unit
+            <span class="gradient-text">
+              Converter
+            </span>
+          </h1>
+
+          <p>
+            Convert between common units of length, weight,
+            temperature, area, volume, speed, time, and data.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Unit Converter
+              </span>
+
+              <h2>
+                Convert any supported unit
+              </h2>
+
+              <p>
+                Select a category and choose the units you want
+                to convert between.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 CATEGORY
+                 ================================================= -->
+
+            <div class="form-group">
+
+              <label
+                class="form-label"
+                for="category"
+              >
+                Category
+              </label>
+
+              <select
+                class="input"
+                id="category"
+              >
+
+                <option value="length">
+                  Length
+                </option>
+
+                <option value="weight">
+                  Weight / Mass
+                </option>
+
+                <option value="temperature">
+                  Temperature
+                </option>
+
+                <option value="area">
+                  Area
+                </option>
+
+                <option value="volume">
+                  Volume
+                </option>
+
+                <option value="speed">
+                  Speed
+                </option>
+
+                <option value="time">
+                  Time
+                </option>
+
+                <option value="data">
+                  Digital Storage
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <!-- =================================================
+                 VALUE
+                 ================================================= -->
+
+            <div
+              class="form-group"
+              style="margin-top: 22px;"
+            >
+
+              <label
+                class="form-label"
+                for="inputValue"
+              >
+                Value
+              </label>
+
+              <input
+                class="input"
+                type="number"
+                id="inputValue"
+                value="1"
+                step="any"
+                placeholder="Enter value"
+              >
+
+            </div>
+
+
+            <!-- =================================================
+                 FROM / TO
+                 ================================================= -->
+
+            <div
+              class="form-grid"
+              style="margin-top: 22px;"
+            >
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="fromUnit"
+                >
+                  From
+                </label>
+
+                <select
+                  class="input"
+                  id="fromUnit"
+                ></select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="toUnit"
+                >
+                  To
+                </label>
+
+                <select
+                  class="input"
+                  id="toUnit"
+                ></select>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="convertBtn"
+              >
+
+                Convert
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="swapBtn"
+              >
+                Swap Units
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="
+                margin-top: 28px;
+                text-align: center;
+              "
+            >
+
+              <div class="result-label">
+                Conversion Result
+              </div>
+
+
+              <div
+                class="result-number"
+                id="result"
+              >
+                1
+              </div>
+
+
+              <p
+                class="result-description"
+                id="resultText"
+              >
+                1 Meter = 100 Centimeters
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    From
+                  </span>
+
+                  <span id="fromLabel">
+                    Meter
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    To
+                  </span>
+
+                  <span id="toLabel">
+                    Centimeter
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Category
+                  </span>
+
+                  <span id="categoryLabel">
+                    Length
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 QUICK CONVERSIONS
+                 ================================================= -->
+
+            <div
+              class="tool-panel-header"
+              style="margin-top: 40px;"
+            >
+
+              <span class="card-category">
+                Quick Conversions
+              </span>
+
+              <h2>
+                Common unit pairs
+              </h2>
+
+              <p>
+                Quickly switch between commonly used units.
+              </p>
+
+            </div>
+
+
+            <div class="form-grid">
+
+              <button
+                type="button"
+                class="btn btn-secondary quick-btn"
+                data-category="length"
+                data-from="meter"
+                data-to="foot"
+              >
+                Meter → Feet
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary quick-btn"
+                data-category="weight"
+                data-from="kilogram"
+                data-to="pound"
+              >
+                Kilogram → Pounds
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary quick-btn"
+                data-category="temperature"
+                data-from="celsius"
+                data-to="fahrenheit"
+              >
+                Celsius → Fahrenheit
+              </button>
+
+
+              <button
+                type="button"
+                class="btn btn-secondary quick-btn"
+                data-category="volume"
+                data-from="liter"
+                data-to="gallon"
+              >
+                Liters → Gallons
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Convert units in seconds
+          </h2>
+
+          <p>
+            Choose a category, enter your value, select the
+            starting and destination units, and Toolora instantly
+            calculates the converted value.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a href="../../index.html" class="footer-link">
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a href="../../about/index.html" class="footer-link">
+              About
+            </a>
+
+            <a href="../../contact/index.html" class="footer-link">
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a href="../../privacy/index.html" class="footer-link">
+              Privacy
+            </a>
+
+            <a href="../../terms/index.html" class="footer-link">
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const category =
+      document.getElementById("category");
+
+    const inputValue =
+      document.getElementById("inputValue");
+
+    const fromUnit =
+      document.getElementById("fromUnit");
+
+    const toUnit =
+      document.getElementById("toUnit");
+
+    const convertBtn =
+      document.getElementById("convertBtn");
+
+    const swapBtn =
+      document.getElementById("swapBtn");
+
+    const result =
+      document.getElementById("result");
+
+    const resultText =
+      document.getElementById("resultText");
+
+    const fromLabel =
+      document.getElementById("fromLabel");
+
+    const toLabel =
+      document.getElementById("toLabel");
+
+    const categoryLabel =
+      document.getElementById("categoryLabel");
+
+
+    /* =====================================================
+       UNIT DATA
+       ===================================================== */
+
+    const units = {
+
+      length: {
+
+        name: "Length",
+
+        units: {
+
+          meter: {
+            name: "Meter",
+            symbol: "m",
+            factor: 1
+          },
+
+          kilometer: {
+            name: "Kilometer",
+            symbol: "km",
+            factor: 1000
+          },
+
+          centimeter: {
+            name: "Centimeter",
+            symbol: "cm",
+            factor: 0.01
+          },
+
+          millimeter: {
+            name: "Millimeter",
+            symbol: "mm",
+            factor: 0.001
+          },
+
+          micrometer: {
+            name: "Micrometer",
+            symbol: "μm",
+            factor: 0.000001
+          },
+
+          mile: {
+            name: "Mile",
+            symbol: "mi",
+            factor: 1609.344
+          },
+
+          yard: {
+            name: "Yard",
+            symbol: "yd",
+            factor: 0.9144
+          },
+
+          foot: {
+            name: "Foot",
+            symbol: "ft",
+            factor: 0.3048
+          },
+
+          inch: {
+            name: "Inch",
+            symbol: "in",
+            factor: 0.0254
+          }
+
+        }
+
+      },
+
+
+      weight: {
+
+        name: "Weight / Mass",
+
+        units: {
+
+          kilogram: {
+            name: "Kilogram",
+            symbol: "kg",
+            factor: 1
+          },
+
+          gram: {
+            name: "Gram",
+            symbol: "g",
+            factor: 0.001
+          },
+
+          milligram: {
+            name: "Milligram",
+            symbol: "mg",
+            factor: 0.000001
+          },
+
+          metricTon: {
+            name: "Metric Ton",
+            symbol: "t",
+            factor: 1000
+          },
+
+          pound: {
+            name: "Pound",
+            symbol: "lb",
+            factor: 0.45359237
+          },
+
+          ounce: {
+            name: "Ounce",
+            symbol: "oz",
+            factor: 0.028349523125
+          },
+
+          stone: {
+            name: "Stone",
+            symbol: "st",
+            factor: 6.35029318
+          }
+
+        }
+
+      },
+
+
+      temperature: {
+
+        name: "Temperature",
+
+        units: {
+
+          celsius: {
+            name: "Celsius",
+            symbol: "°C"
+          },
+
+          fahrenheit: {
+            name: "Fahrenheit",
+            symbol: "°F"
+          },
+
+          kelvin: {
+            name: "Kelvin",
+            symbol: "K"
+          }
+
+        }
+
+      },
+
+
+      area: {
+
+        name: "Area",
+
+        units: {
+
+          squareMeter: {
+            name: "Square Meter",
+            symbol: "m²",
+            factor: 1
+          },
+
+          squareKilometer: {
+            name: "Square Kilometer",
+            symbol: "km²",
+            factor: 1000000
+          },
+
+          squareCentimeter: {
+            name: "Square Centimeter",
+            symbol: "cm²",
+            factor: 0.0001
+          },
+
+          squareFoot: {
+            name: "Square Foot",
+            symbol: "ft²",
+            factor: 0.09290304
+          },
+
+          squareYard: {
+            name: "Square Yard",
+            symbol: "yd²",
+            factor: 0.83612736
+          },
+
+          squareMile: {
+            name: "Square Mile",
+            symbol: "mi²",
+            factor: 2589988.110336
+          },
+
+          acre: {
+            name: "Acre",
+            symbol: "ac",
+            factor: 4046.8564224
+          },
+
+          hectare: {
+            name: "Hectare",
+            symbol: "ha",
+            factor: 10000
+          }
+
+        }
+
+      },
+
+
+      volume: {
+
+        name: "Volume",
+
+        units: {
+
+          liter: {
+            name: "Liter",
+            symbol: "L",
+            factor: 1
+          },
+
+          milliliter: {
+            name: "Milliliter",
+            symbol: "mL",
+            factor: 0.001
+          },
+
+          cubicMeter: {
+            name: "Cubic Meter",
+            symbol: "m³",
+            factor: 1000
+          },
+
+          cubicCentimeter: {
+            name: "Cubic Centimeter",
+            symbol: "cm³",
+            factor: 0.001
+          },
+
+          gallon: {
+            name: "US Gallon",
+            symbol: "gal",
+            factor: 3.785411784
+          },
+
+          quart: {
+            name: "US Quart",
+            symbol: "qt",
+            factor: 0.946352946
+          },
+
+          pint: {
+            name: "US Pint",
+            symbol: "pt",
+            factor: 0.473176473
+          },
+
+          cup: {
+            name: "US Cup",
+            symbol: "cup",
+            factor: 0.2365882365
+          },
+
+          fluidOunce: {
+            name: "US Fluid Ounce",
+            symbol: "fl oz",
+            factor: 0.0295735295625
+          }
+
+        }
+
+      },
+
+
+      speed: {
+
+        name: "Speed",
+
+        units: {
+
+          meterPerSecond: {
+            name: "Meter per Second",
+            symbol: "m/s",
+            factor: 1
+          },
+
+          kilometerPerHour: {
+            name: "Kilometer per Hour",
+            symbol: "km/h",
+            factor: 0.2777777778
+          },
+
+          milePerHour: {
+            name: "Mile per Hour",
+            symbol: "mph",
+            factor: 0.44704
+          },
+
+          footPerSecond: {
+            name: "Foot per Second",
+            symbol: "ft/s",
+            factor: 0.3048
+          },
+
+          knot: {
+            name: "Knot",
+            symbol: "kn",
+            factor: 0.5144444444
+          }
+
+        }
+
+      },
+
+
+      time: {
+
+        name: "Time",
+
+        units: {
+
+          second: {
+            name: "Second",
+            symbol: "s",
+            factor: 1
+          },
+
+          millisecond: {
+            name: "Millisecond",
+            symbol: "ms",
+            factor: 0.001
+          },
+
+          minute: {
+            name: "Minute",
+            symbol: "min",
+            factor: 60
+          },
+
+          hour: {
+            name: "Hour",
+            symbol: "h",
+            factor: 3600
+          },
+
+          day: {
+            name: "Day",
+            symbol: "d",
+            factor: 86400
+          },
+
+          week: {
+            name: "Week",
+            symbol: "wk",
+            factor: 604800
+          }
+
+        }
+
+      },
+
+
+      data: {
+
+        name: "Digital Storage",
+
+        units: {
+
+          bit: {
+            name: "Bit",
+            symbol: "bit",
+            factor: 1
+          },
+
+          byte: {
+            name: "Byte",
+            symbol: "B",
+            factor: 8
+          },
+
+          kilobyte: {
+            name: "Kilobyte",
+            symbol: "KB",
+            factor: 8000
+          },
+
+          megabyte: {
+            name: "Megabyte",
+            symbol: "MB",
+            factor: 8000000
+          },
+
+          gigabyte: {
+            name: "Gigabyte",
+            symbol: "GB",
+            factor: 8000000000
+          },
+
+          terabyte: {
+            name: "Terabyte",
+            symbol: "TB",
+            factor: 8000000000000
+          },
+
+          kibibyte: {
+            name: "Kibibyte",
+            symbol: "KiB",
+            factor: 8192
+          },
+
+          mebibyte: {
+            name: "Mebibyte",
+            symbol: "MiB",
+            factor: 8388608
+          },
+
+          gibibyte: {
+            name: "Gibibyte",
+            symbol: "GiB",
+            factor: 8589934592
+          },
+
+          tebibyte: {
+            name: "Tebibyte",
+            symbol: "TiB",
+            factor: 8796093022208
+          }
+
+        }
+
+      }
+
+    };
+
+
+    /* =====================================================
+       POPULATE UNIT SELECTS
+       ===================================================== */
+
+    function populateUnits() {
+
+      const selectedCategory =
+        units[
+          category.value
+        ];
+
+
+      fromUnit.innerHTML =
+        "";
+
+      toUnit.innerHTML =
+        "";
+
+
+      Object.entries(
+        selectedCategory.units
+      ).forEach(
+        function([
+          key,
+          unit
+        ]) {
+
+          const fromOption =
+            document.createElement(
+              "option"
+            );
+
+          fromOption.value =
+            key;
+
+          fromOption.textContent =
+            `${unit.name} (${unit.symbol})`;
+
+          fromUnit.appendChild(
+            fromOption
+          );
+
+
+          const toOption =
+            document.createElement(
+              "option"
+            );
+
+          toOption.value =
+            key;
+
+          toOption.textContent =
+            `${unit.name} (${unit.symbol})`;
+
+          toUnit.appendChild(
+            toOption
+          );
+
+        }
+      );
+
+
+      /*
+       * Set useful defaults.
+       */
+
+      const keys =
+        Object.keys(
+          selectedCategory.units
+        );
+
+
+      if (
+        category.value ===
+        "temperature"
+      ) {
+
+        fromUnit.value =
+          "celsius";
+
+        toUnit.value =
+          "fahrenheit";
+
+      } else {
+
+        fromUnit.value =
+          keys[0];
+
+        toUnit.value =
+          keys[1] ||
+          keys[0];
+
+      }
+
+
+      updateCategoryLabel();
+
+      convert();
+
+    }
+
+
+    /* =====================================================
+       TEMPERATURE CONVERSION
+       ===================================================== */
+
+    function convertTemperature(
+      value,
+      from,
+      to
+    ) {
+
+      let celsius;
+
+
+      if (
+        from ===
+        "celsius"
+      ) {
+
+        celsius =
+          value;
+
+      } else if (
+        from ===
+        "fahrenheit"
+      ) {
+
+        celsius =
+          (
+            value - 32
+          ) *
+          5 /
+          9;
+
+      } else if (
+        from ===
+        "kelvin"
+      ) {
+
+        celsius =
+          value - 273.15;
+
+      }
+
+
+      if (
+        to ===
+        "celsius"
+      ) {
+
+        return celsius;
+
+      }
+
+
+      if (
+        to ===
+        "fahrenheit"
+      ) {
+
+        return (
+          celsius *
+          9 /
+          5
+        ) +
+        32;
+
+      }
+
+
+      if (
+        to ===
+        "kelvin"
+      ) {
+
+        return (
+          celsius +
+          273.15
+        );
+
+      }
+
+
+      return celsius;
+
+    }
+
+
+    /* =====================================================
+       FORMAT RESULT
+       ===================================================== */
+
+    function formatNumber(
+      number
+    ) {
+
+      if (
+        !Number.isFinite(number)
+      ) {
+
+        return "—";
+
+      }
+
+
+      if (
+        number === 0
+      ) {
+
+        return "0";
+
+      }
+
+
+      const absolute =
+        Math.abs(number);
+
+
+      if (
+        absolute >=
+        0.000001 &&
+        absolute <
+        1000000000000
+      ) {
+
+        return Number(
+          number.toPrecision(12)
+        ).toLocaleString(
+          "en-US",
+          {
+            maximumFractionDigits: 10
+          }
+        );
+
+      }
+
+
+      return number.toExponential(
+        8
+      );
+
+    }
+
+
+    /* =====================================================
+       CONVERT
+       ===================================================== */
+
+    function convert() {
+
+      const value =
+        Number(
+          inputValue.value
+        );
+
+
+      if (
+        !Number.isFinite(value)
+      ) {
+
+        result.textContent =
+          "—";
+
+        resultText.textContent =
+          "Please enter a valid number.";
+
+        return;
+
+      }
+
+
+      const selectedCategory =
+        units[
+          category.value
+        ];
+
+
+      const from =
+        selectedCategory.units[
+          fromUnit.value
+        ];
+
+      const to =
+        selectedCategory.units[
+          toUnit.value
+        ];
+
+
+      let convertedValue;
+
+
+      /*
+       * Temperature uses formulas.
+       */
+
+      if (
+        category.value ===
+        "temperature"
+      ) {
+
+        convertedValue =
+          convertTemperature(
+            value,
+            fromUnit.value,
+            toUnit.value
+          );
+
+      } else {
+
+        /*
+         * All other categories use
+         * base-unit conversion.
+         */
+
+        const baseValue =
+          value *
+          from.factor;
+
+
+        convertedValue =
+          baseValue /
+          to.factor;
+
+      }
+
+
+      result.textContent =
+        `${formatNumber(convertedValue)} ${to.symbol}`;
+
+
+      resultText.textContent =
+        `${formatNumber(value)} ${from.symbol} = ${formatNumber(convertedValue)} ${to.symbol}`;
+
+
+      fromLabel.textContent =
+        `${from.name} (${from.symbol})`;
+
+
+      toLabel.textContent =
+        `${to.name} (${to.symbol})`;
+
+
+      categoryLabel.textContent =
+        selectedCategory.name;
+
+    }
+
+
+    /* =====================================================
+       CATEGORY LABEL
+       ===================================================== */
+
+    function updateCategoryLabel() {
+
+      categoryLabel.textContent =
+        units[
+          category.value
+        ].name;
+
+    }
+
+
+    /* =====================================================
+       SWAP
+       ===================================================== */
+
+    function swapUnits() {
+
+      const currentFrom =
+        fromUnit.value;
+
+      fromUnit.value =
+        toUnit.value;
+
+      toUnit.value =
+        currentFrom;
+
+
+      convert();
+
+    }
+
+
+    /* =====================================================
+       CATEGORY CHANGE
+       ===================================================== */
+
+    category.addEventListener(
+      "change",
+      populateUnits
+    );
+
+
+    /* =====================================================
+       INPUT CHANGE
+       ===================================================== */
+
+    inputValue.addEventListener(
+      "input",
+      convert
+    );
+
+
+    fromUnit.addEventListener(
+      "change",
+      convert
+    );
+
+
+    toUnit.addEventListener(
+      "change",
+      convert
+    );
+
+
+    convertBtn.addEventListener(
+      "click",
+      convert
+    );
+
+
+    swapBtn.addEventListener(
+      "click",
+      swapUnits
+    );
+
+
+    /* =====================================================
+       QUICK CONVERSION BUTTONS
+       ===================================================== */
+
+    const quickButtons =
+      document.querySelectorAll(
+        ".quick-btn"
+      );
+
+
+    quickButtons.forEach(
+      function(button) {
+
+        button.addEventListener(
+          "click",
+          function() {
+
+            category.value =
+              button.dataset.category;
+
+
+            populateUnits();
+
+
+            fromUnit.value =
+              button.dataset.from;
+
+
+            toUnit.value =
+              button.dataset.to;
+
+
+            convert();
+
+          }
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       INITIALIZE
+       ===================================================== */
+
+    populateUnits();
+
+  </script>
+
+</body>
+</html>
