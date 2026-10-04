@@ -1,0 +1,1431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Time Zone Converter — Toolora</title>
+
+  <meta
+    name="description"
+    content="Convert date and time between different time zones with Toolora's free online time zone converter."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+
+          <svg viewBox="0 0 24 24" fill="none">
+
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+          </svg>
+
+        </span>
+
+        <span>
+          Toolora
+        </span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a
+          href="../../index.html"
+          class="nav-link"
+        >
+          Home
+        </a>
+
+        <a
+          href="../../calculators/index.html"
+          class="nav-link"
+        >
+          Calculators
+        </a>
+
+        <a
+          href="../../tools/index.html"
+          class="nav-link active"
+        >
+          Tools
+        </a>
+
+        <a
+          href="../../games/index.html"
+          class="nav-link"
+        >
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../tools/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <!-- HERO -->
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Time & Productivity
+          </span>
+
+          <h1>
+            Time Zone
+            <span class="gradient-text">
+              Converter
+            </span>
+          </h1>
+
+          <p>
+            Convert date and time between different time zones.
+            Quickly find the correct local time anywhere in the world.
+          </p>
+
+        </div>
+
+
+        <!-- =================================================
+             TOOL
+             ================================================= -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Time Zone Converter
+              </span>
+
+              <h2>
+                Convert a date and time
+              </h2>
+
+              <p>
+                Select the source and destination time zones.
+              </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 DATE + TIME
+                 ================================================= -->
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="dateInput"
+                >
+                  Date
+                </label>
+
+                <input
+                  class="input"
+                  type="date"
+                  id="dateInput"
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="timeInput"
+                >
+                  Time
+                </label>
+
+                <input
+                  class="input"
+                  type="time"
+                  id="timeInput"
+                  step="60"
+                >
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FROM / TO
+                 ================================================= -->
+
+            <div class="form-grid" style="margin-top: 22px;">
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="fromTimezone"
+                >
+                  From Time Zone
+                </label>
+
+                <select
+                  class="input"
+                  id="fromTimezone"
+                >
+
+                  <option value="Asia/Karachi">
+                    Pakistan — Karachi (PKT)
+                  </option>
+
+                  <option value="Asia/Dubai">
+                    UAE — Dubai (GST)
+                  </option>
+
+                  <option value="Asia/Riyadh">
+                    Saudi Arabia — Riyadh (AST)
+                  </option>
+
+                  <option value="Asia/Kolkata">
+                    India — Kolkata (IST)
+                  </option>
+
+                  <option value="Asia/Dhaka">
+                    Bangladesh — Dhaka (BST)
+                  </option>
+
+                  <option value="Asia/Tokyo">
+                    Japan — Tokyo (JST)
+                  </option>
+
+                  <option value="Asia/Shanghai">
+                    China — Shanghai (CST)
+                  </option>
+
+                  <option value="Asia/Singapore">
+                    Singapore (SGT)
+                  </option>
+
+                  <option value="Europe/London">
+                    United Kingdom — London
+                  </option>
+
+                  <option value="Europe/Paris">
+                    France — Paris
+                  </option>
+
+                  <option value="Europe/Berlin">
+                    Germany — Berlin
+                  </option>
+
+                  <option value="America/New_York">
+                    USA — New York (ET)
+                  </option>
+
+                  <option value="America/Chicago">
+                    USA — Chicago (CT)
+                  </option>
+
+                  <option value="America/Denver">
+                    USA — Denver (MT)
+                  </option>
+
+                  <option value="America/Los_Angeles">
+                    USA — Los Angeles (PT)
+                  </option>
+
+                  <option value="Australia/Sydney">
+                    Australia — Sydney
+                  </option>
+
+                  <option value="Pacific/Auckland">
+                    New Zealand — Auckland
+                  </option>
+
+                  <option value="UTC">
+                    UTC
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="toTimezone"
+                >
+                  To Time Zone
+                </label>
+
+                <select
+                  class="input"
+                  id="toTimezone"
+                >
+
+                  <option value="America/New_York">
+                    USA — New York (ET)
+                  </option>
+
+                  <option value="America/Chicago">
+                    USA — Chicago (CT)
+                  </option>
+
+                  <option value="America/Denver">
+                    USA — Denver (MT)
+                  </option>
+
+                  <option value="America/Los_Angeles">
+                    USA — Los Angeles (PT)
+                  </option>
+
+                  <option value="Europe/London">
+                    United Kingdom — London
+                  </option>
+
+                  <option value="Europe/Paris">
+                    France — Paris
+                  </option>
+
+                  <option value="Europe/Berlin">
+                    Germany — Berlin
+                  </option>
+
+                  <option value="Asia/Karachi">
+                    Pakistan — Karachi (PKT)
+                  </option>
+
+                  <option value="Asia/Dubai">
+                    UAE — Dubai (GST)
+                  </option>
+
+                  <option value="Asia/Riyadh">
+                    Saudi Arabia — Riyadh (AST)
+                  </option>
+
+                  <option value="Asia/Kolkata">
+                    India — Kolkata (IST)
+                  </option>
+
+                  <option value="Asia/Dhaka">
+                    Bangladesh — Dhaka (BST)
+                  </option>
+
+                  <option value="Asia/Tokyo">
+                    Japan — Tokyo (JST)
+                  </option>
+
+                  <option value="Asia/Shanghai">
+                    China — Shanghai (CST)
+                  </option>
+
+                  <option value="Asia/Singapore">
+                    Singapore (SGT)
+                  </option>
+
+                  <option value="Australia/Sydney">
+                    Australia — Sydney
+                  </option>
+
+                  <option value="Pacific/Auckland">
+                    New Zealand — Auckland
+                  </option>
+
+                  <option value="UTC">
+                    UTC
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ACTIONS
+                 ================================================= -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="convertBtn"
+              >
+
+                Convert Time
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="swapBtn"
+              >
+                Swap Zones
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="nowBtn"
+              >
+                Use Current Time
+              </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESULT
+                 ================================================= -->
+
+            <div
+              class="result-panel"
+              style="
+                margin-top: 28px;
+                text-align: center;
+              "
+            >
+
+              <div class="result-label">
+                Converted Time
+              </div>
+
+
+              <div
+                id="convertedTime"
+                class="result-number"
+              >
+                —
+              </div>
+
+
+              <p
+                class="result-description"
+                id="resultStatus"
+              >
+                Select your time zones and convert the time.
+              </p>
+
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    Date
+                  </span>
+
+                  <span id="convertedDate">
+                    —
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Time Zone
+                  </span>
+
+                  <span id="convertedZone">
+                    —
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    UTC Offset
+                  </span>
+
+                  <span id="utcOffset">
+                    —
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 DISPLAY SETTINGS
+                 ================================================= -->
+
+            <div
+              class="tool-panel-header"
+              style="margin-top: 40px;"
+            >
+
+              <span class="card-category">
+                Display
+              </span>
+
+              <h2>
+                Choose time format
+              </h2>
+
+              <p>
+                Switch between 12-hour and 24-hour time.
+              </p>
+
+            </div>
+
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="format12"
+              >
+                12-Hour
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="format24"
+              >
+                24-Hour
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INFORMATION
+         ===================================================== -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Convert time zones accurately
+          </h2>
+
+          <p>
+            Select a date and time, choose the time zone the
+            time belongs to, and select the destination time zone.
+            Toolora converts the time using your browser's built-in
+            international time zone data, including daylight-saving
+            time rules where applicable.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /* =====================================================
+       ELEMENTS
+       ===================================================== */
+
+    const dateInput =
+      document.getElementById("dateInput");
+
+    const timeInput =
+      document.getElementById("timeInput");
+
+    const fromTimezone =
+      document.getElementById("fromTimezone");
+
+    const toTimezone =
+      document.getElementById("toTimezone");
+
+    const convertBtn =
+      document.getElementById("convertBtn");
+
+    const swapBtn =
+      document.getElementById("swapBtn");
+
+    const nowBtn =
+      document.getElementById("nowBtn");
+
+    const convertedTime =
+      document.getElementById("convertedTime");
+
+    const convertedDate =
+      document.getElementById("convertedDate");
+
+    const convertedZone =
+      document.getElementById("convertedZone");
+
+    const utcOffset =
+      document.getElementById("utcOffset");
+
+    const resultStatus =
+      document.getElementById("resultStatus");
+
+    const format12 =
+      document.getElementById("format12");
+
+    const format24 =
+      document.getElementById("format24");
+
+
+    let timeFormat = "12-hour";
+
+
+    /* =====================================================
+       DATE HELPERS
+       ===================================================== */
+
+    function getTodayString() {
+
+      const now =
+        new Date();
+
+
+      return [
+        now.getFullYear(),
+        String(
+          now.getMonth() + 1
+        ).padStart(2, "0"),
+        String(
+          now.getDate()
+        ).padStart(2, "0")
+      ].join("-");
+
+    }
+
+
+    function getCurrentTimeString() {
+
+      const now =
+        new Date();
+
+
+      return [
+        String(
+          now.getHours()
+        ).padStart(2, "0"),
+        String(
+          now.getMinutes()
+        ).padStart(2, "0")
+      ].join(":");
+
+    }
+
+
+    /* =====================================================
+       TIMEZONE OFFSET
+       ===================================================== */
+
+    function getTimeZoneOffset(
+      date,
+      timeZone
+    ) {
+
+      const parts =
+        new Intl.DateTimeFormat(
+          "en-US",
+          {
+            timeZone,
+            timeZoneName: "longOffset",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hourCycle: "h23"
+          }
+        ).formatToParts(date);
+
+
+      const zonePart =
+        parts.find(
+          part =>
+            part.type ===
+            "timeZoneName"
+        );
+
+
+      if (
+        !zonePart ||
+        !zonePart.value
+      ) {
+
+        return "+00:00";
+
+      }
+
+
+      return zonePart.value
+        .replace(
+          "GMT",
+          ""
+        ) || "+00:00";
+
+    }
+
+
+    /* =====================================================
+       GET ZONE DATE PARTS
+       ===================================================== */
+
+    function getZoneParts(
+      date,
+      timeZone
+    ) {
+
+      const parts =
+        new Intl.DateTimeFormat(
+          "en-US",
+          {
+            timeZone,
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hourCycle: "h23"
+          }
+        ).formatToParts(date);
+
+
+      const result = {};
+
+
+      parts.forEach(
+        function(part) {
+
+          if (
+            part.type !==
+            "literal"
+          ) {
+
+            result[
+              part.type
+            ] =
+              part.value;
+
+          }
+
+        }
+      );
+
+
+      return result;
+
+    }
+
+
+    /* =====================================================
+       CREATE UTC DATE FROM LOCAL TIMEZONE
+       ===================================================== */
+
+    function zonedDateTimeToUTC(
+      dateString,
+      timeString,
+      timeZone
+    ) {
+
+      const [
+        year,
+        month,
+        day
+      ] =
+        dateString
+          .split("-")
+          .map(Number);
+
+
+      const [
+        hour,
+        minute
+      ] =
+        timeString
+          .split(":")
+          .map(Number);
+
+
+      /*
+       * Start with the entered values
+       * interpreted as UTC.
+       */
+
+      let utcGuess =
+        Date.UTC(
+          year,
+          month - 1,
+          day,
+          hour,
+          minute,
+          0
+        );
+
+
+      /*
+       * Iteratively correct the guess
+       * using the actual timezone offset.
+       */
+
+      for (
+        let i = 0;
+        i < 3;
+        i++
+      ) {
+
+        const guessDate =
+          new Date(
+            utcGuess
+          );
+
+
+        const parts =
+          getZoneParts(
+            guessDate,
+            timeZone
+          );
+
+
+        const asUTC =
+          Date.UTC(
+            Number(parts.year),
+            Number(parts.month) - 1,
+            Number(parts.day),
+            Number(parts.hour),
+            Number(parts.minute),
+            Number(parts.second)
+          );
+
+
+        const desired =
+          Date.UTC(
+            year,
+            month - 1,
+            day,
+            hour,
+            minute,
+            0
+          );
+
+
+        utcGuess +=
+          desired - asUTC;
+
+      }
+
+
+      return new Date(
+        utcGuess
+      );
+
+    }
+
+
+    /* =====================================================
+       DISPLAY CONVERTED TIME
+       ===================================================== */
+
+    function convertTime() {
+
+      const dateValue =
+        dateInput.value;
+
+      const timeValue =
+        timeInput.value;
+
+
+      if (
+        !dateValue ||
+        !timeValue
+      ) {
+
+        convertedTime.textContent =
+          "—";
+
+        convertedDate.textContent =
+          "—";
+
+        convertedZone.textContent =
+          "—";
+
+        utcOffset.textContent =
+          "—";
+
+        resultStatus.textContent =
+          "Please select both a date and time.";
+
+        return;
+
+      }
+
+
+      try {
+
+        const utcDate =
+          zonedDateTimeToUTC(
+            dateValue,
+            timeValue,
+            fromTimezone.value
+          );
+
+
+        const targetParts =
+          getZoneParts(
+            utcDate,
+            toTimezone.value
+          );
+
+
+        let hour =
+          Number(
+            targetParts.hour
+          );
+
+
+        const minute =
+          String(
+            targetParts.minute
+          ).padStart(
+            2,
+            "0"
+          );
+
+
+        let displayHour =
+          hour;
+
+        let suffix =
+          "";
+
+
+        if (
+          timeFormat ===
+          "12-hour"
+        ) {
+
+          suffix =
+            hour >= 12
+              ? "PM"
+              : "AM";
+
+
+          displayHour =
+            hour % 12 || 12;
+
+        }
+
+
+        convertedTime.textContent =
+          `${String(displayHour).padStart(2, "0")}:${minute} ${suffix}`;
+
+
+        const formattedDate =
+          new Intl.DateTimeFormat(
+            "en-US",
+            {
+              timeZone:
+                toTimezone.value,
+              weekday:
+                "long",
+              year:
+                "numeric",
+              month:
+                "long",
+              day:
+                "numeric"
+            }
+          ).format(
+            utcDate
+          );
+
+
+        convertedDate.textContent =
+          formattedDate;
+
+
+        convertedZone.textContent =
+          getTimeZoneName(
+            utcDate,
+            toTimezone.value
+          );
+
+
+        utcOffset.textContent =
+          getTimeZoneOffset(
+            utcDate,
+            toTimezone.value
+          );
+
+
+        resultStatus.textContent =
+          `Converted from ${getTimeZoneName(
+            utcDate,
+            fromTimezone.value
+          )} to ${getTimeZoneName(
+            utcDate,
+            toTimezone.value
+          )}.`;
+
+      } catch (error) {
+
+        convertedTime.textContent =
+          "Unable to convert";
+
+        resultStatus.textContent =
+          "Please check your selected date, time, and time zones.";
+
+      }
+
+    }
+
+
+    /* =====================================================
+       TIMEZONE NAME
+       ===================================================== */
+
+    function getTimeZoneName(
+      date,
+      timeZone
+    ) {
+
+      const formatted =
+        new Intl.DateTimeFormat(
+          "en-US",
+          {
+            timeZone,
+            timeZoneName:
+              "short"
+          }
+        ).formatToParts(
+          date
+        );
+
+
+      const zone =
+        formatted.find(
+          part =>
+            part.type ===
+            "timeZoneName"
+        );
+
+
+      return zone
+        ? zone.value
+        : timeZone;
+
+    }
+
+
+    /* =====================================================
+       USE CURRENT TIME
+       ===================================================== */
+
+    function useCurrentTime() {
+
+      dateInput.value =
+        getTodayString();
+
+      timeInput.value =
+        getCurrentTimeString();
+
+
+      convertTime();
+
+    }
+
+
+    /* =====================================================
+       SWAP TIMEZONES
+       ===================================================== */
+
+    function swapZones() {
+
+      const currentFrom =
+        fromTimezone.value;
+
+      fromTimezone.value =
+        toTimezone.value;
+
+      toTimezone.value =
+        currentFrom;
+
+
+      convertTime();
+
+    }
+
+
+    /* =====================================================
+       FORMAT BUTTONS
+       ===================================================== */
+
+    format12.addEventListener(
+      "click",
+      function() {
+
+        timeFormat =
+          "12-hour";
+
+        convertTime();
+
+      }
+    );
+
+
+    format24.addEventListener(
+      "click",
+      function() {
+
+        timeFormat =
+          "24-hour";
+
+        convertTime();
+
+      }
+    );
+
+
+    /* =====================================================
+       EVENTS
+       ===================================================== */
+
+    convertBtn.addEventListener(
+      "click",
+      convertTime
+    );
+
+
+    swapBtn.addEventListener(
+      "click",
+      swapZones
+    );
+
+
+    nowBtn.addEventListener(
+      "click",
+      useCurrentTime
+    );
+
+
+    dateInput.addEventListener(
+      "change",
+      convertTime
+    );
+
+
+    timeInput.addEventListener(
+      "change",
+      convertTime
+    );
+
+
+    fromTimezone.addEventListener(
+      "change",
+      convertTime
+    );
+
+
+    toTimezone.addEventListener(
+      "change",
+      convertTime
+    );
+
+
+    /* =====================================================
+       DEFAULT VALUES
+       ===================================================== */
+
+    dateInput.value =
+      getTodayString();
+
+    timeInput.value =
+      getCurrentTimeString();
+
+
+    /* =====================================================
+       INITIAL CONVERSION
+       ===================================================== */
+
+    convertTime();
+
+  </script>
+
+</body>
+</html>
