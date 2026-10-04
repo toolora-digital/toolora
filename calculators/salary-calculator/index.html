@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Salary Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate annual salary, monthly salary, weekly pay, and hourly pay with Toolora's free salary calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8.5 7H17V15.5"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+
+        <span>Toolora</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="../../index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="../../calculators/index.html" class="nav-link active">
+          Calculators
+        </a>
+
+        <a href="../../tools/index.html" class="nav-link">
+          Tools
+        </a>
+
+        <a href="../../games/index.html" class="nav-link">
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../calculators/index.html"
+          class="btn btn-secondary btn-small"
+        >
+          All Calculators
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-toggle icon-btn"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7H20M4 12H20M4 17H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero grid-background">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Finance & Work
+          </span>
+
+          <h1>
+            Salary
+            <span class="gradient-text">Calculator</span>
+          </h1>
+
+          <p>
+            Calculate your monthly, weekly, daily, and hourly salary
+            from your annual income.
+          </p>
+
+        </div>
+
+
+        <!-- TOOL -->
+
+        <div class="hero-visual">
+
+          <div class="hero-orb one"></div>
+          <div class="hero-orb two"></div>
+
+
+          <div class="tool-panel perspective-surface">
+
+            <div class="tool-panel-header">
+
+              <span class="card-category">
+                Salary Calculator
+              </span>
+
+              <h2>
+                Calculate your salary breakdown
+              </h2>
+
+              <p>
+                Enter your annual salary and working details below.
+              </p>
+
+            </div>
+
+
+            <!-- INPUTS -->
+
+            <div class="form-grid">
+
+              <!-- Annual Salary -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="annualSalary"
+                >
+                  Annual Salary
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="annualSalary"
+                  placeholder="e.g. 1200000"
+                  min="0"
+                  step="0.01"
+                >
+
+              </div>
+
+
+              <!-- Working Hours -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="hoursPerWeek"
+                >
+                  Hours Per Week
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="hoursPerWeek"
+                  placeholder="e.g. 40"
+                  min="1"
+                  step="0.5"
+                  value="40"
+                >
+
+              </div>
+
+
+              <!-- Working Weeks -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="weeksPerYear"
+                >
+                  Working Weeks Per Year
+                </label>
+
+                <input
+                  class="input"
+                  type="number"
+                  id="weeksPerYear"
+                  placeholder="e.g. 52"
+                  min="1"
+                  max="52"
+                  step="1"
+                  value="52"
+                >
+
+              </div>
+
+
+              <!-- Currency -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="currency"
+                >
+                  Currency
+                </label>
+
+                <select
+                  class="select"
+                  id="currency"
+                >
+
+                  <option value="PKR">
+                    PKR
+                  </option>
+
+                  <option value="USD">
+                    USD
+                  </option>
+
+                  <option value="SAR">
+                    SAR
+                  </option>
+
+                  <option value="AED">
+                    AED
+                  </option>
+
+                  <option value="GBP">
+                    GBP
+                  </option>
+
+                  <option value="EUR">
+                    EUR
+                  </option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="tool-actions">
+
+              <button
+                class="btn btn-primary btn-large"
+                type="button"
+                id="calculateBtn"
+              >
+
+                Calculate Salary
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                  <path
+                    d="M5 12H19M13 6L19 12L13 18"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="resetBtn"
+              >
+                Reset
+              </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div
+              class="result-panel"
+              id="resultPanel"
+              style="margin-top: 28px;"
+            >
+
+              <!-- Copy -->
+
+              <button
+                class="icon-btn copy-button"
+                type="button"
+                id="copyBtn"
+                aria-label="Copy result"
+                title="Copy result"
+              >
+
+                <svg viewBox="0 0 24 24" fill="none">
+
+                  <rect
+                    x="9"
+                    y="9"
+                    width="10"
+                    height="10"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+
+                  <path
+                    d="M15 9V7C15 5.895 14.105 5 13 5H7C5.895 5 5 5.895 5 7V13C5 14.105 5.895 15 7 15H9"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                  />
+
+                </svg>
+
+              </button>
+
+
+              <div class="result-label">
+                Monthly Salary
+              </div>
+
+
+              <div
+                class="result-number"
+                id="monthlySalary"
+              >
+                0
+              </div>
+
+
+              <p
+                class="result-description"
+                id="resultDescription"
+              >
+                Enter your annual salary to calculate your salary breakdown.
+              </p>
+
+
+              <!-- BREAKDOWN -->
+
+              <div class="result-breakdown">
+
+                <div class="result-row">
+
+                  <span>
+                    Annual Salary
+                  </span>
+
+                  <span id="annualResult">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Monthly Salary
+                  </span>
+
+                  <span id="monthlyResult">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Weekly Salary
+                  </span>
+
+                  <span id="weeklyResult">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Daily Salary
+                  </span>
+
+                  <span id="dailyResult">
+                    0
+                  </span>
+
+                </div>
+
+
+                <div class="result-row">
+
+                  <span>
+                    Hourly Salary
+                  </span>
+
+                  <span id="hourlyResult">
+                    0
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INFORMATION -->
+
+    <section class="section section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            How it works
+          </span>
+
+          <h2>
+            Understand your salary
+          </h2>
+
+          <p>
+            Toolora calculates your estimated monthly, weekly, daily,
+            and hourly earnings from your annual salary and working schedule.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="../../index.html" class="logo">
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8.5 7H17V15.5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </span>
+
+            <span>
+              Toolora
+            </span>
+
+          </a>
+
+
+          <p>
+            Beautiful, useful digital tools designed to make
+            everyday calculations and tasks simpler.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Platform
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../index.html"
+              class="footer-link"
+            >
+              Home
+            </a>
+
+            <a
+              href="../../calculators/index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Tools
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    const annualSalaryInput =
+      document.getElementById("annualSalary");
+
+    const hoursPerWeekInput =
+      document.getElementById("hoursPerWeek");
+
+    const weeksPerYearInput =
+      document.getElementById("weeksPerYear");
+
+    const currencyInput =
+      document.getElementById("currency");
+
+
+    const calculateBtn =
+      document.getElementById("calculateBtn");
+
+    const resetBtn =
+      document.getElementById("resetBtn");
+
+    const copyBtn =
+      document.getElementById("copyBtn");
+
+
+    const monthlySalary =
+      document.getElementById("monthlySalary");
+
+    const annualResult =
+      document.getElementById("annualResult");
+
+    const monthlyResult =
+      document.getElementById("monthlyResult");
+
+    const weeklyResult =
+      document.getElementById("weeklyResult");
+
+    const dailyResult =
+      document.getElementById("dailyResult");
+
+    const hourlyResult =
+      document.getElementById("hourlyResult");
+
+    const resultDescription =
+      document.getElementById("resultDescription");
+
+
+    function formatNumber(number) {
+
+      return new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: 2
+      }).format(number);
+
+    }
+
+
+    function calculateSalary() {
+
+      const annualSalary =
+        parseFloat(annualSalaryInput.value);
+
+      const hoursPerWeek =
+        parseFloat(hoursPerWeekInput.value);
+
+      const weeksPerYear =
+        parseFloat(weeksPerYearInput.value);
+
+      const currency =
+        currencyInput.value;
+
+
+      if (
+        isNaN(annualSalary) ||
+        isNaN(hoursPerWeek) ||
+        isNaN(weeksPerYear) ||
+        annualSalary < 0 ||
+        hoursPerWeek <= 0 ||
+        weeksPerYear <= 0 ||
+        weeksPerYear > 52
+      ) {
+
+        resultDescription.textContent =
+          "Please enter valid salary and working schedule details.";
+
+        return;
+
+      }
+
+
+      const monthly =
+        annualSalary / 12;
+
+
+      const weekly =
+        annualSalary / weeksPerYear;
+
+
+      const daily =
+        weekly / 5;
+
+
+      const hourly =
+        annualSalary /
+        (weeksPerYear * hoursPerWeek);
+
+
+      const formatCurrency =
+        function(value) {
+
+          return currency + " " + formatNumber(value);
+
+        };
+
+
+      monthlySalary.textContent =
+        formatCurrency(monthly);
+
+
+      annualResult.textContent =
+        formatCurrency(annualSalary);
+
+
+      monthlyResult.textContent =
+        formatCurrency(monthly);
+
+
+      weeklyResult.textContent =
+        formatCurrency(weekly);
+
+
+      dailyResult.textContent =
+        formatCurrency(daily);
+
+
+      hourlyResult.textContent =
+        formatCurrency(hourly);
+
+
+      resultDescription.textContent =
+        `Estimated earnings based on ${hoursPerWeek} hours per week.`;
+
+    }
+
+
+    function resetCalculator() {
+
+      annualSalaryInput.value = "";
+
+      hoursPerWeekInput.value = "40";
+
+      weeksPerYearInput.value = "52";
+
+      currencyInput.value = "PKR";
+
+
+      monthlySalary.textContent =
+        "0";
+
+
+      annualResult.textContent =
+        "0";
+
+
+      monthlyResult.textContent =
+        "0";
+
+
+      weeklyResult.textContent =
+        "0";
+
+
+      dailyResult.textContent =
+        "0";
+
+
+      hourlyResult.textContent =
+        "0";
+
+
+      resultDescription.textContent =
+        "Enter your annual salary to calculate your salary breakdown.";
+
+    }
+
+
+    async function copyResult() {
+
+      const text =
+        `Monthly Salary: ${monthlySalary.textContent}\n` +
+        `Annual Salary: ${annualResult.textContent}\n` +
+        `Weekly Salary: ${weeklyResult.textContent}\n` +
+        `Daily Salary: ${dailyResult.textContent}\n` +
+        `Hourly Salary: ${hourlyResult.textContent}`;
+
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+
+        copyBtn.setAttribute(
+          "title",
+          "Copied!"
+        );
+
+
+        setTimeout(() => {
+
+          copyBtn.setAttribute(
+            "title",
+            "Copy result"
+          );
+
+        }, 1500);
+
+
+      } catch (error) {
+
+        console.log("Copy failed.");
+
+      }
+
+    }
+
+
+    calculateBtn.addEventListener(
+      "click",
+      calculateSalary
+    );
+
+
+    resetBtn.addEventListener(
+      "click",
+      resetCalculator
+    );
+
+
+    copyBtn.addEventListener(
+      "click",
+      copyResult
+    );
+
+
+    annualSalaryInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateSalary();
+        }
+
+      }
+    );
+
+
+    hoursPerWeekInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateSalary();
+        }
+
+      }
+    );
+
+
+    weeksPerYearInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          calculateSalary();
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
