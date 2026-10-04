@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>BMI Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate your Body Mass Index with Toolora's free BMI calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark">
+
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8 7h9v9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+        </span>
+
+        Toolora
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="../../index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="../index.html" class="nav-link active">
+          Calculators
+        </a>
+
+        <a href="../../tools/index.html" class="nav-link">
+          Tools
+        </a>
+
+        <a href="../../games/index.html" class="nav-link">
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../index.html"
+          class="btn btn-secondary"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+
+      <button
+        class="icon-btn mobile-menu-toggle"
+        type="button"
+        aria-label="Open menu"
+      >
+
+        <svg viewBox="0 0 24 24" fill="none">
+          <path
+            d="M4 7h16M4 12h16M4 17h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MAIN
+       ===================================================== -->
+
+  <main>
+
+
+    <!-- INTRO -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Health Calculator
+          </span>
+
+          <h1>
+            BMI Calculator
+          </h1>
+
+          <p>
+            Calculate your Body Mass Index using your height
+            and weight.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         CALCULATOR
+         ================================================= -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="tool-panel">
+
+          <div class="tool-panel-header">
+
+            <span class="card-category">
+              BMI
+            </span>
+
+            <h2>
+              Calculate your BMI
+            </h2>
+
+            <p>
+              Enter your height and weight to calculate
+              your Body Mass Index.
+            </p>
+
+          </div>
+
+
+
+          <!-- UNIT SELECTOR -->
+
+          <div class="form-group">
+
+            <label class="form-label">
+              Measurement system
+            </label>
+
+
+            <div class="segmented-control">
+
+              <button
+                type="button"
+                class="segmented-option active"
+                id="metricButton"
+              >
+                Metric
+              </button>
+
+
+              <button
+                type="button"
+                class="segmented-option"
+                id="imperialButton"
+              >
+                Imperial
+              </button>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="tool-divider"></div>
+
+
+
+          <!-- METRIC FORM -->
+
+          <div id="metricForm">
+
+            <div class="form-grid">
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="heightCm"
+                >
+                  Height
+                </label>
+
+                <input
+                  class="input"
+                  id="heightCm"
+                  type="number"
+                  min="50"
+                  max="300"
+                  step="0.1"
+                  placeholder="e.g. 175"
+                >
+
+                <span class="form-hint">
+                  Centimeters
+                </span>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="weightKg"
+                >
+                  Weight
+                </label>
+
+                <input
+                  class="input"
+                  id="weightKg"
+                  type="number"
+                  min="10"
+                  max="500"
+                  step="0.1"
+                  placeholder="e.g. 70"
+                >
+
+                <span class="form-hint">
+                  Kilograms
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- IMPERIAL FORM -->
+
+          <div id="imperialForm" style="display:none;">
+
+            <div class="form-grid">
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="heightFeet"
+                >
+                  Height
+                </label>
+
+                <input
+                  class="input"
+                  id="heightFeet"
+                  type="number"
+                  min="1"
+                  max="8"
+                  step="1"
+                  placeholder="Feet"
+                >
+
+                <span class="form-hint">
+                  Feet
+                </span>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="heightInches"
+                >
+                  Additional height
+                </label>
+
+                <input
+                  class="input"
+                  id="heightInches"
+                  type="number"
+                  min="0"
+                  max="11"
+                  step="0.1"
+                  placeholder="Inches"
+                >
+
+                <span class="form-hint">
+                  Inches
+                </span>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="weightLbs"
+                >
+                  Weight
+                </label>
+
+                <input
+                  class="input"
+                  id="weightLbs"
+                  type="number"
+                  min="20"
+                  max="1100"
+                  step="0.1"
+                  placeholder="e.g. 154"
+                >
+
+                <span class="form-hint">
+                  Pounds
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+
+          <!-- ACTIONS -->
+
+          <div class="tool-actions">
+
+            <button
+              type="button"
+              id="calculateButton"
+              class="btn btn-primary btn-large"
+            >
+
+              Calculate BMI
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
+
+            </button>
+
+
+            <button
+              type="button"
+              id="resetButton"
+              class="btn btn-secondary btn-large"
+            >
+              Reset
+            </button>
+
+          </div>
+
+
+
+          <div class="tool-divider"></div>
+
+
+
+          <!-- =================================================
+               RESULT
+               ================================================= -->
+
+          <div
+            class="result-panel"
+            id="resultPanel"
+          >
+
+            <div class="result-label">
+              Your BMI
+            </div>
+
+
+            <div
+              class="result-number"
+              id="bmiResult"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-description"
+              id="bmiDescription"
+            >
+              Enter your height and weight to calculate your BMI.
+            </div>
+
+
+            <div class="result-breakdown">
+
+
+              <div class="result-row">
+
+                <span>
+                  BMI Category
+                </span>
+
+                <span id="bmiCategory">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Height
+                </span>
+
+                <span id="resultHeight">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Weight
+                </span>
+
+                <span id="resultWeight">
+                  —
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         BMI INFORMATION
+         ================================================= -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <span class="eyebrow">
+              BMI Categories
+            </span>
+
+            <h2 style="margin-top:12px;">
+              Understanding your BMI
+            </h2>
+
+            <p style="margin-top:14px;">
+              For adults, BMI is commonly interpreted using
+              standard weight categories. BMI is a screening
+              measurement and does not by itself determine
+              an individual's health.
+            </p>
+
+
+            <div
+              class="result-breakdown"
+              style="margin-top:24px;"
+            >
+
+
+              <div class="result-row">
+
+                <span>
+                  Underweight
+                </span>
+
+                <span>
+                  Below 18.5
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Healthy range
+                </span>
+
+                <span>
+                  18.5 – 24.9
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Overweight
+                </span>
+
+                <span>
+                  25.0 – 29.9
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Obesity
+                </span>
+
+                <span>
+                  30.0+
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+
+                <path
+                  d="M7 17L17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </span>
+
+            Toolora
+
+          </a>
+
+
+          <p>
+            Beautifully engineered tools for everyday
+            calculations, productivity and learning.
+          </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <h4>
+            Tools
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../index.html"
+              class="footer-link"
+            >
+              Calculators
+            </a>
+
+            <a
+              href="../../tools/index.html"
+              class="footer-link"
+            >
+              Productivity
+            </a>
+
+            <a
+              href="../../games/index.html"
+              class="footer-link"
+            >
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <h4>
+            Company
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../about/index.html"
+              class="footer-link"
+            >
+              About
+            </a>
+
+            <a
+              href="../../contact/index.html"
+              class="footer-link"
+            >
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+          <h4>
+            Legal
+          </h4>
+
+          <div class="footer-links">
+
+            <a
+              href="../../privacy/index.html"
+              class="footer-link"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="../../terms/index.html"
+              class="footer-link"
+            >
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script>
+
+    /*
+     * ELEMENTS
+     */
+
+    const metricButton =
+      document.getElementById("metricButton");
+
+    const imperialButton =
+      document.getElementById("imperialButton");
+
+    const metricForm =
+      document.getElementById("metricForm");
+
+    const imperialForm =
+      document.getElementById("imperialForm");
+
+    const calculateButton =
+      document.getElementById("calculateButton");
+
+    const resetButton =
+      document.getElementById("resetButton");
+
+    const heightCm =
+      document.getElementById("heightCm");
+
+    const weightKg =
+      document.getElementById("weightKg");
+
+    const heightFeet =
+      document.getElementById("heightFeet");
+
+    const heightInches =
+      document.getElementById("heightInches");
+
+    const weightLbs =
+      document.getElementById("weightLbs");
+
+    const bmiResult =
+      document.getElementById("bmiResult");
+
+    const bmiDescription =
+      document.getElementById("bmiDescription");
+
+    const bmiCategory =
+      document.getElementById("bmiCategory");
+
+    const resultHeight =
+      document.getElementById("resultHeight");
+
+    const resultWeight =
+      document.getElementById("resultWeight");
+
+
+
+    /*
+     * CURRENT UNIT
+     */
+
+    let currentUnit = "metric";
+
+
+
+    /*
+     * METRIC MODE
+     */
+
+    metricButton.addEventListener(
+      "click",
+      function () {
+
+        currentUnit = "metric";
+
+        metricButton.classList.add("active");
+
+        imperialButton.classList.remove("active");
+
+        metricForm.style.display = "block";
+
+        imperialForm.style.display = "none";
+
+      }
+    );
+
+
+
+    /*
+     * IMPERIAL MODE
+     */
+
+    imperialButton.addEventListener(
+      "click",
+      function () {
+
+        currentUnit = "imperial";
+
+        imperialButton.classList.add("active");
+
+        metricButton.classList.remove("active");
+
+        imperialForm.style.display = "block";
+
+        metricForm.style.display = "none";
+
+      }
+    );
+
+
+
+    /*
+     * CALCULATE BMI
+     */
+
+    calculateButton.addEventListener(
+      "click",
+      function () {
+
+        let bmi;
+
+        let heightInMeters;
+
+        let displayHeight;
+
+        let displayWeight;
+
+
+
+        /*
+         * METRIC CALCULATION
+         */
+
+        if (currentUnit === "metric") {
+
+          const height =
+            parseFloat(heightCm.value);
+
+          const weight =
+            parseFloat(weightKg.value);
+
+
+          if (
+            !height ||
+            !weight ||
+            height <= 0 ||
+            weight <= 0
+          ) {
+
+            showError(
+              "Please enter a valid height and weight."
+            );
+
+            return;
+
+          }
+
+
+          heightInMeters =
+            height / 100;
+
+          bmi =
+            weight /
+            (
+              heightInMeters *
+              heightInMeters
+            );
+
+
+          displayHeight =
+            `${height} cm`;
+
+          displayWeight =
+            `${weight} kg`;
+
+        }
+
+
+
+        /*
+         * IMPERIAL CALCULATION
+         */
+
+        else {
+
+          const feet =
+            parseFloat(heightFeet.value) || 0;
+
+          const inches =
+            parseFloat(heightInches.value) || 0;
+
+          const pounds =
+            parseFloat(weightLbs.value);
+
+
+          if (
+            feet <= 0 ||
+            pounds <= 0
+          ) {
+
+            showError(
+              "Please enter a valid height and weight."
+            );
+
+            return;
+
+          }
+
+
+          const totalInches =
+            (
+              feet * 12
+            ) + inches;
+
+
+          if (totalInches <= 0) {
+
+            showError(
+              "Please enter a valid height."
+            );
+
+            return;
+
+          }
+
+
+          /*
+           * BMI imperial formula
+           */
+
+          bmi =
+            (
+              pounds /
+              (
+                totalInches *
+                totalInches
+              )
+            ) * 703;
+
+
+          displayHeight =
+            `${feet} ft ${inches} in`;
+
+          displayWeight =
+            `${pounds} lb`;
+
+        }
+
+
+
+        /*
+         * CATEGORY
+         */
+
+        let category;
+
+        let description;
+
+
+        if (bmi < 18.5) {
+
+          category =
+            "Underweight";
+
+          description =
+            "Your BMI is below the standard adult healthy range.";
+
+        }
+
+        else if (bmi < 25) {
+
+          category =
+            "Healthy range";
+
+          description =
+            "Your BMI falls within the standard adult healthy range.";
+
+        }
+
+        else if (bmi < 30) {
+
+          category =
+            "Overweight";
+
+          description =
+            "Your BMI falls within the standard adult overweight range.";
+
+        }
+
+        else {
+
+          category =
+            "Obesity";
+
+          description =
+            "Your BMI is within the standard adult obesity range.";
+
+        }
+
+
+
+        /*
+         * DISPLAY RESULT
+         */
+
+        bmiResult.textContent =
+          bmi.toFixed(1);
+
+
+        bmiCategory.textContent =
+          category;
+
+
+        bmiDescription.textContent =
+          description;
+
+
+        resultHeight.textContent =
+          displayHeight;
+
+
+        resultWeight.textContent =
+          displayWeight;
+
+
+
+        /*
+         * RESULT ANIMATION
+         */
+
+        bmiResult.animate(
+          [
+            {
+              opacity: 0,
+              transform: "translateY(8px)"
+            },
+
+            {
+              opacity: 1,
+              transform: "translateY(0)"
+            }
+          ],
+          {
+            duration: 350,
+            easing:
+              "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        );
+
+      }
+    );
+
+
+
+    /*
+     * ERROR
+     */
+
+    function showError(message) {
+
+      bmiResult.textContent =
+        "—";
+
+      bmiCategory.textContent =
+        "Invalid input";
+
+      bmiDescription.textContent =
+        message;
+
+      resultHeight.textContent =
+        "—";
+
+      resultWeight.textContent =
+        "—";
+
+    }
+
+
+
+    /*
+     * RESET
+     */
+
+    resetButton.addEventListener(
+      "click",
+      function () {
+
+        heightCm.value = "";
+
+        weightKg.value = "";
+
+        heightFeet.value = "";
+
+        heightInches.value = "";
+
+        weightLbs.value = "";
+
+
+        bmiResult.textContent =
+          "—";
+
+        bmiCategory.textContent =
+          "—";
+
+        bmiDescription.textContent =
+          "Enter your height and weight to calculate your BMI.";
+
+        resultHeight.textContent =
+          "—";
+
+        resultWeight.textContent =
+          "—";
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
