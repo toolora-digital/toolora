@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Age Calculator — Toolora</title>
+
+  <meta
+    name="description"
+    content="Calculate your exact age in years, months and days with Toolora's free online age calculator."
+  >
+
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <header class="site-header">
+
+    <nav class="navbar">
+
+      <a href="../../index.html" class="logo">
+
+        <span class="logo-mark">
+
+          <svg viewBox="0 0 24 24" fill="none">
+            <path
+              d="M7 17L17 7M8 7h9v9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+        </span>
+
+        Toolora
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="../../index.html" class="nav-link">
+          Home
+        </a>
+
+        <a href="../index.html" class="nav-link active">
+          Calculators
+        </a>
+
+        <a href="../../tools/index.html" class="nav-link">
+          Tools
+        </a>
+
+        <a href="../../games/index.html" class="nav-link">
+          Games
+        </a>
+
+      </div>
+
+
+      <div class="nav-actions">
+
+        <a
+          href="../../index.html"
+          class="btn btn-secondary"
+        >
+          All Tools
+        </a>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- MAIN -->
+
+  <main>
+
+
+    <!-- INTRO -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="section-heading">
+
+          <span class="eyebrow">
+            Calculator
+          </span>
+
+          <h1>
+            Age Calculator
+          </h1>
+
+          <p>
+            Calculate your exact age in years, months and days
+            from your date of birth.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- CALCULATOR -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="tool-panel">
+
+          <div class="tool-panel-header">
+
+            <span class="card-category">
+              Age
+            </span>
+
+            <h2>
+              Calculate your age
+            </h2>
+
+            <p>
+              Enter your date of birth and choose the date
+              you want to calculate your age on.
+            </p>
+
+          </div>
+
+
+          <form id="ageForm">
+
+
+            <div class="form-grid">
+
+
+              <!-- DATE OF BIRTH -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="birthDate"
+                >
+                  Date of birth
+                </label>
+
+                <input
+                  class="input"
+                  id="birthDate"
+                  type="date"
+                  required
+                >
+
+              </div>
+
+
+              <!-- CALCULATION DATE -->
+
+              <div class="form-group">
+
+                <label
+                  class="form-label"
+                  for="calculateDate"
+                >
+                  Calculate age on
+                </label>
+
+                <input
+                  class="input"
+                  id="calculateDate"
+                  type="date"
+                  required
+                >
+
+              </div>
+
+
+            </div>
+
+
+            <div class="tool-actions">
+
+              <button
+                type="submit"
+                class="btn btn-primary btn-large"
+              >
+
+                Calculate Age
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+
+              </button>
+
+
+              <button
+                type="button"
+                id="resetButton"
+                class="btn btn-secondary btn-large"
+              >
+                Reset
+              </button>
+
+            </div>
+
+          </form>
+
+
+          <div class="tool-divider"></div>
+
+
+          <!-- RESULT -->
+
+          <div class="result-panel">
+
+            <div class="result-label">
+              Exact Age
+            </div>
+
+
+            <div
+              class="result-number"
+              id="resultNumber"
+            >
+              —
+            </div>
+
+
+            <div
+              class="result-description"
+              id="resultDescription"
+            >
+              Enter your date of birth to calculate your age.
+            </div>
+
+
+            <div class="result-breakdown">
+
+
+              <div class="result-row">
+
+                <span>
+                  Years
+                </span>
+
+                <span id="yearsResult">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Months
+                </span>
+
+                <span id="monthsResult">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Days
+                </span>
+
+                <span id="daysResult">
+                  —
+                </span>
+
+              </div>
+
+
+              <div class="result-row">
+
+                <span>
+                  Total days
+                </span>
+
+                <span id="totalDaysResult">
+                  —
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- EXPLANATION -->
+
+    <section class="section-sm">
+
+      <div class="container-narrow">
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <span class="eyebrow">
+              About this calculator
+            </span>
+
+            <h2 style="margin-top:12px;">
+              How age is calculated
+            </h2>
+
+            <p style="margin-top:14px;">
+              Toolora calculates the difference between your
+              date of birth and the selected calculation date.
+              The result shows your completed years, months and
+              remaining days.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a
+            href="../../index.html"
+            class="logo"
+          >
+
+            <span class="logo-mark">
+
+              <svg viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M7 17L17 7M8 7h9v9"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+            </span>
+
+            Toolora
+
+          </a>
+
+
+          <p>
+            Beautifully engineered tools for everyday
+            calculations, productivity and learning.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Tools</h4>
+
+          <div class="footer-links">
+
+            <a href="../index.html" class="footer-link">
+              Calculators
+            </a>
+
+            <a href="../../tools/index.html" class="footer-link">
+              Productivity
+            </a>
+
+            <a href="../../games/index.html" class="footer-link">
+              Games
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Company</h4>
+
+          <div class="footer-links">
+
+            <a href="../../about/index.html" class="footer-link">
+              About
+            </a>
+
+            <a href="../../contact/index.html" class="footer-link">
+              Contact
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Legal</h4>
+
+          <div class="footer-links">
+
+            <a href="../../privacy/index.html" class="footer-link">
+              Privacy
+            </a>
+
+            <a href="../../terms/index.html" class="footer-link">
+              Terms
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Toolora. All rights reserved.
+        </span>
+
+        <span>
+          Developed by Salar Groups.
+        </span>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const ageForm =
+      document.getElementById("ageForm");
+
+    const birthDate =
+      document.getElementById("birthDate");
+
+    const calculateDate =
+      document.getElementById("calculateDate");
+
+    const resultNumber =
+      document.getElementById("resultNumber");
+
+    const resultDescription =
+      document.getElementById("resultDescription");
+
+    const yearsResult =
+      document.getElementById("yearsResult");
+
+    const monthsResult =
+      document.getElementById("monthsResult");
+
+    const daysResult =
+      document.getElementById("daysResult");
+
+    const totalDaysResult =
+      document.getElementById("totalDaysResult");
+
+    const resetButton =
+      document.getElementById("resetButton");
+
+
+    /*
+      DEFAULT CALCULATION DATE
+    */
+
+    const today =
+      new Date();
+
+    const todayString =
+      today.toISOString().split("T")[0];
+
+    calculateDate.value =
+      todayString;
+
+
+    /*
+      CALCULATE AGE
+    */
+
+    ageForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+
+        if (
+          !birthDate.value ||
+          !calculateDate.value
+        ) {
+          return;
+        }
+
+
+        const birth =
+          new Date(
+            birthDate.value + "T00:00:00"
+          );
+
+        const end =
+          new Date(
+            calculateDate.value + "T00:00:00"
+          );
+
+
+        /*
+          Prevent future birth dates
+        */
+
+        if (birth > end) {
+
+          resultNumber.textContent = "—";
+
+          resultDescription.textContent =
+            "Date of birth cannot be after the calculation date.";
+
+          return;
+
+        }
+
+
+        /*
+          Calculate years
+        */
+
+        let years =
+          end.getFullYear() -
+          birth.getFullYear();
+
+
+        let months =
+          end.getMonth() -
+          birth.getMonth();
+
+
+        let days =
+          end.getDate() -
+          birth.getDate();
+
+
+        /*
+          Adjust days
+        */
+
+        if (days < 0) {
+
+          months--;
+
+          const previousMonth =
+            new Date(
+              end.getFullYear(),
+              end.getMonth(),
+              0
+            );
+
+          days +=
+            previousMonth.getDate();
+
+        }
+
+
+        /*
+          Adjust months
+        */
+
+        if (months < 0) {
+
+          years--;
+
+          months += 12;
+
+        }
+
+
+        /*
+          Total days
+        */
+
+        const millisecondsPerDay =
+          1000 * 60 * 60 * 24;
+
+        const totalDays =
+          Math.floor(
+            (
+              end.getTime() -
+              birth.getTime()
+            ) /
+            millisecondsPerDay
+          );
+
+
+        /*
+          Display result
+        */
+
+        resultNumber.textContent =
+          `${years}y ${months}m ${days}d`;
+
+
+        resultDescription.textContent =
+          `You are ${years} years, ${months} months and ${days} days old.`;
+
+
+        yearsResult.textContent =
+          years;
+
+
+        monthsResult.textContent =
+          months;
+
+
+        daysResult.textContent =
+          days;
+
+
+        totalDaysResult.textContent =
+          totalDays.toLocaleString();
+
+
+        /*
+          Animation
+        */
+
+        resultNumber.animate(
+          [
+            {
+              opacity: 0,
+              transform: "translateY(8px)"
+            },
+            {
+              opacity: 1,
+              transform: "translateY(0)"
+            }
+          ],
+          {
+            duration: 350,
+            easing:
+              "cubic-bezier(0.22, 1, 0.36, 1)"
+          }
+        );
+
+      }
+    );
+
+
+    /*
+      RESET
+    */
+
+    resetButton.addEventListener(
+      "click",
+      function() {
+
+        ageForm.reset();
+
+        calculateDate.value =
+          todayString;
+
+        resultNumber.textContent =
+          "—";
+
+        resultDescription.textContent =
+          "Enter your date of birth to calculate your age.";
+
+        yearsResult.textContent =
+          "—";
+
+        monthsResult.textContent =
+          "—";
+
+        daysResult.textContent =
+          "—";
+
+        totalDaysResult.textContent =
+          "—";
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
