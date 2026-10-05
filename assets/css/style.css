@@ -2384,3 +2384,95 @@ p {
   }
 
 }
+/* =====================================================
+   TOOLORA — MOBILE NAVIGATION
+   FINAL FIX
+   ===================================================== */
+
+@media (max-width: 850px) {
+
+  .navbar {
+    position: relative;
+  }
+
+  /* Hamburger button */
+  .mobile-menu-toggle {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    z-index: 1002;
+  }
+
+  /* Hidden by default */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  /* OPEN MOBILE MENU */
+  .nav-links.mobile-menu-open {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+
+    padding: 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    box-shadow: var(--shadow-lg);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    z-index: 1001;
+
+    animation: mobileNavOpen 220ms var(--ease) both;
+  }
+
+  /* Individual links */
+  .nav-links.mobile-menu-open .nav-link {
+    display: block;
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border-radius: 11px;
+
+    font-size: 0.92rem;
+  }
+
+  .nav-links.mobile-menu-open .nav-link:hover,
+  .nav-links.mobile-menu-open .nav-link.active {
+    background: var(--primary-soft);
+  }
+
+}
+
+
+/* Mobile menu animation */
+
+@keyframes mobileNavOpen {
+
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
