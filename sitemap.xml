@@ -1,1 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/about/</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/contact/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/privacy/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/terms/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Category Pages -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/student/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/games/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Calculators -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/age-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/bmi-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/compound-interest-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/discount-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/loan-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/percentage-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/profit-margin-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/salary-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/calculators/date-calculator/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tools -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/countdown-timer/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/password-generator/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/qr-code-generator/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/random-number-generator/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/time-zone-converter/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/unit-converter/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/username-generator/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/tools/word-counter/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Student Tools -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/student/attendance-calculator/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/student/gpa-calculator/</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Games -->
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/games/guess-the-country/</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/games/geography-quiz/</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://toolora-digital.github.io/toolora/games/guess-the-flag/</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
